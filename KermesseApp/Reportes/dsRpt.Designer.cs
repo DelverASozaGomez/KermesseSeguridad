@@ -24,21 +24,23 @@ namespace KermesseApp.Reportes {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class dsRpt : global::System.Data.DataSet {
         
-        private tbl_arqueocajaDataTable tabletbl_arqueocaja;
+        private tbl_usuarioDataTable tabletbl_usuario;
         
-        private tbl_ingreso_comDataTable tabletbl_ingreso_com;
+        private tbl_rolDataTable tabletbl_rol;
         
-        private tbl_listaprecioDataTable tabletbl_listaprecio;
+        private tbl_opcionesDataTable tabletbl_opciones;
         
-        private tbl_kermesseDataTable tabletbl_kermesse;
+        private tbl_rol_opcionDataTable tabletbl_rol_opcion;
         
-        private tbl_gastosDataTable tabletbl_gastos;
+        private tbl_rol_usuarioDataTable tabletbl_rol_usuario;
         
-        private global::System.Data.DataRelation relationFK_tbl_ingreso_com_tbl_kermesse;
+        private global::System.Data.DataRelation relationFK_tbl_rol_opcion_tbl_opciones;
         
-        private global::System.Data.DataRelation relationFK_tbl_listaprecio_tbl_kermesse;
+        private global::System.Data.DataRelation relationFK_tbl_rol_opcion_tbl_rol;
         
-        private global::System.Data.DataRelation relationFK_tbl_gastos_tbl_kermesse;
+        private global::System.Data.DataRelation relationFK_tbl_rol_usuario_tbl_rol;
+        
+        private global::System.Data.DataRelation relationFK_tbl_rol_usuario_tbl_usuario;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -68,20 +70,20 @@ namespace KermesseApp.Reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["tbl_arqueocaja"] != null)) {
-                    base.Tables.Add(new tbl_arqueocajaDataTable(ds.Tables["tbl_arqueocaja"]));
+                if ((ds.Tables["tbl_usuario"] != null)) {
+                    base.Tables.Add(new tbl_usuarioDataTable(ds.Tables["tbl_usuario"]));
                 }
-                if ((ds.Tables["tbl_ingreso_com"] != null)) {
-                    base.Tables.Add(new tbl_ingreso_comDataTable(ds.Tables["tbl_ingreso_com"]));
+                if ((ds.Tables["tbl_rol"] != null)) {
+                    base.Tables.Add(new tbl_rolDataTable(ds.Tables["tbl_rol"]));
                 }
-                if ((ds.Tables["tbl_listaprecio"] != null)) {
-                    base.Tables.Add(new tbl_listaprecioDataTable(ds.Tables["tbl_listaprecio"]));
+                if ((ds.Tables["tbl_opciones"] != null)) {
+                    base.Tables.Add(new tbl_opcionesDataTable(ds.Tables["tbl_opciones"]));
                 }
-                if ((ds.Tables["tbl_kermesse"] != null)) {
-                    base.Tables.Add(new tbl_kermesseDataTable(ds.Tables["tbl_kermesse"]));
+                if ((ds.Tables["tbl_rol_opcion"] != null)) {
+                    base.Tables.Add(new tbl_rol_opcionDataTable(ds.Tables["tbl_rol_opcion"]));
                 }
-                if ((ds.Tables["tbl_gastos"] != null)) {
-                    base.Tables.Add(new tbl_gastosDataTable(ds.Tables["tbl_gastos"]));
+                if ((ds.Tables["tbl_rol_usuario"] != null)) {
+                    base.Tables.Add(new tbl_rol_usuarioDataTable(ds.Tables["tbl_rol_usuario"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -105,9 +107,9 @@ namespace KermesseApp.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tbl_arqueocajaDataTable tbl_arqueocaja {
+        public tbl_usuarioDataTable tbl_usuario {
             get {
-                return this.tabletbl_arqueocaja;
+                return this.tabletbl_usuario;
             }
         }
         
@@ -115,9 +117,9 @@ namespace KermesseApp.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tbl_ingreso_comDataTable tbl_ingreso_com {
+        public tbl_rolDataTable tbl_rol {
             get {
-                return this.tabletbl_ingreso_com;
+                return this.tabletbl_rol;
             }
         }
         
@@ -125,9 +127,9 @@ namespace KermesseApp.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tbl_listaprecioDataTable tbl_listaprecio {
+        public tbl_opcionesDataTable tbl_opciones {
             get {
-                return this.tabletbl_listaprecio;
+                return this.tabletbl_opciones;
             }
         }
         
@@ -135,9 +137,9 @@ namespace KermesseApp.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tbl_kermesseDataTable tbl_kermesse {
+        public tbl_rol_opcionDataTable tbl_rol_opcion {
             get {
-                return this.tabletbl_kermesse;
+                return this.tabletbl_rol_opcion;
             }
         }
         
@@ -145,9 +147,9 @@ namespace KermesseApp.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tbl_gastosDataTable tbl_gastos {
+        public tbl_rol_usuarioDataTable tbl_rol_usuario {
             get {
-                return this.tabletbl_gastos;
+                return this.tabletbl_rol_usuario;
             }
         }
         
@@ -218,20 +220,20 @@ namespace KermesseApp.Reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["tbl_arqueocaja"] != null)) {
-                    base.Tables.Add(new tbl_arqueocajaDataTable(ds.Tables["tbl_arqueocaja"]));
+                if ((ds.Tables["tbl_usuario"] != null)) {
+                    base.Tables.Add(new tbl_usuarioDataTable(ds.Tables["tbl_usuario"]));
                 }
-                if ((ds.Tables["tbl_ingreso_com"] != null)) {
-                    base.Tables.Add(new tbl_ingreso_comDataTable(ds.Tables["tbl_ingreso_com"]));
+                if ((ds.Tables["tbl_rol"] != null)) {
+                    base.Tables.Add(new tbl_rolDataTable(ds.Tables["tbl_rol"]));
                 }
-                if ((ds.Tables["tbl_listaprecio"] != null)) {
-                    base.Tables.Add(new tbl_listaprecioDataTable(ds.Tables["tbl_listaprecio"]));
+                if ((ds.Tables["tbl_opciones"] != null)) {
+                    base.Tables.Add(new tbl_opcionesDataTable(ds.Tables["tbl_opciones"]));
                 }
-                if ((ds.Tables["tbl_kermesse"] != null)) {
-                    base.Tables.Add(new tbl_kermesseDataTable(ds.Tables["tbl_kermesse"]));
+                if ((ds.Tables["tbl_rol_opcion"] != null)) {
+                    base.Tables.Add(new tbl_rol_opcionDataTable(ds.Tables["tbl_rol_opcion"]));
                 }
-                if ((ds.Tables["tbl_gastos"] != null)) {
-                    base.Tables.Add(new tbl_gastosDataTable(ds.Tables["tbl_gastos"]));
+                if ((ds.Tables["tbl_rol_usuario"] != null)) {
+                    base.Tables.Add(new tbl_rol_usuarioDataTable(ds.Tables["tbl_rol_usuario"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -266,39 +268,40 @@ namespace KermesseApp.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabletbl_arqueocaja = ((tbl_arqueocajaDataTable)(base.Tables["tbl_arqueocaja"]));
+            this.tabletbl_usuario = ((tbl_usuarioDataTable)(base.Tables["tbl_usuario"]));
             if ((initTable == true)) {
-                if ((this.tabletbl_arqueocaja != null)) {
-                    this.tabletbl_arqueocaja.InitVars();
+                if ((this.tabletbl_usuario != null)) {
+                    this.tabletbl_usuario.InitVars();
                 }
             }
-            this.tabletbl_ingreso_com = ((tbl_ingreso_comDataTable)(base.Tables["tbl_ingreso_com"]));
+            this.tabletbl_rol = ((tbl_rolDataTable)(base.Tables["tbl_rol"]));
             if ((initTable == true)) {
-                if ((this.tabletbl_ingreso_com != null)) {
-                    this.tabletbl_ingreso_com.InitVars();
+                if ((this.tabletbl_rol != null)) {
+                    this.tabletbl_rol.InitVars();
                 }
             }
-            this.tabletbl_listaprecio = ((tbl_listaprecioDataTable)(base.Tables["tbl_listaprecio"]));
+            this.tabletbl_opciones = ((tbl_opcionesDataTable)(base.Tables["tbl_opciones"]));
             if ((initTable == true)) {
-                if ((this.tabletbl_listaprecio != null)) {
-                    this.tabletbl_listaprecio.InitVars();
+                if ((this.tabletbl_opciones != null)) {
+                    this.tabletbl_opciones.InitVars();
                 }
             }
-            this.tabletbl_kermesse = ((tbl_kermesseDataTable)(base.Tables["tbl_kermesse"]));
+            this.tabletbl_rol_opcion = ((tbl_rol_opcionDataTable)(base.Tables["tbl_rol_opcion"]));
             if ((initTable == true)) {
-                if ((this.tabletbl_kermesse != null)) {
-                    this.tabletbl_kermesse.InitVars();
+                if ((this.tabletbl_rol_opcion != null)) {
+                    this.tabletbl_rol_opcion.InitVars();
                 }
             }
-            this.tabletbl_gastos = ((tbl_gastosDataTable)(base.Tables["tbl_gastos"]));
+            this.tabletbl_rol_usuario = ((tbl_rol_usuarioDataTable)(base.Tables["tbl_rol_usuario"]));
             if ((initTable == true)) {
-                if ((this.tabletbl_gastos != null)) {
-                    this.tabletbl_gastos.InitVars();
+                if ((this.tabletbl_rol_usuario != null)) {
+                    this.tabletbl_rol_usuario.InitVars();
                 }
             }
-            this.relationFK_tbl_ingreso_com_tbl_kermesse = this.Relations["FK_tbl_ingreso_com_tbl_kermesse"];
-            this.relationFK_tbl_listaprecio_tbl_kermesse = this.Relations["FK_tbl_listaprecio_tbl_kermesse"];
-            this.relationFK_tbl_gastos_tbl_kermesse = this.Relations["FK_tbl_gastos_tbl_kermesse"];
+            this.relationFK_tbl_rol_opcion_tbl_opciones = this.Relations["FK_tbl_rol_opcion_tbl_opciones"];
+            this.relationFK_tbl_rol_opcion_tbl_rol = this.Relations["FK_tbl_rol_opcion_tbl_rol"];
+            this.relationFK_tbl_rol_usuario_tbl_rol = this.Relations["FK_tbl_rol_usuario_tbl_rol"];
+            this.relationFK_tbl_rol_usuario_tbl_usuario = this.Relations["FK_tbl_rol_usuario_tbl_usuario"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -309,57 +312,61 @@ namespace KermesseApp.Reportes {
             this.Namespace = "http://tempuri.org/dsRpt.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabletbl_arqueocaja = new tbl_arqueocajaDataTable();
-            base.Tables.Add(this.tabletbl_arqueocaja);
-            this.tabletbl_ingreso_com = new tbl_ingreso_comDataTable();
-            base.Tables.Add(this.tabletbl_ingreso_com);
-            this.tabletbl_listaprecio = new tbl_listaprecioDataTable();
-            base.Tables.Add(this.tabletbl_listaprecio);
-            this.tabletbl_kermesse = new tbl_kermesseDataTable();
-            base.Tables.Add(this.tabletbl_kermesse);
-            this.tabletbl_gastos = new tbl_gastosDataTable();
-            base.Tables.Add(this.tabletbl_gastos);
-            this.relationFK_tbl_ingreso_com_tbl_kermesse = new global::System.Data.DataRelation("FK_tbl_ingreso_com_tbl_kermesse", new global::System.Data.DataColumn[] {
-                        this.tabletbl_kermesse.id_kermesseColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletbl_ingreso_com.id_kermesseColumn}, false);
-            this.Relations.Add(this.relationFK_tbl_ingreso_com_tbl_kermesse);
-            this.relationFK_tbl_listaprecio_tbl_kermesse = new global::System.Data.DataRelation("FK_tbl_listaprecio_tbl_kermesse", new global::System.Data.DataColumn[] {
-                        this.tabletbl_kermesse.id_kermesseColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletbl_listaprecio.id_kermesseColumn}, false);
-            this.Relations.Add(this.relationFK_tbl_listaprecio_tbl_kermesse);
-            this.relationFK_tbl_gastos_tbl_kermesse = new global::System.Data.DataRelation("FK_tbl_gastos_tbl_kermesse", new global::System.Data.DataColumn[] {
-                        this.tabletbl_kermesse.id_kermesseColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletbl_gastos.id_kermesseColumn}, false);
-            this.Relations.Add(this.relationFK_tbl_gastos_tbl_kermesse);
+            this.tabletbl_usuario = new tbl_usuarioDataTable();
+            base.Tables.Add(this.tabletbl_usuario);
+            this.tabletbl_rol = new tbl_rolDataTable();
+            base.Tables.Add(this.tabletbl_rol);
+            this.tabletbl_opciones = new tbl_opcionesDataTable();
+            base.Tables.Add(this.tabletbl_opciones);
+            this.tabletbl_rol_opcion = new tbl_rol_opcionDataTable();
+            base.Tables.Add(this.tabletbl_rol_opcion);
+            this.tabletbl_rol_usuario = new tbl_rol_usuarioDataTable();
+            base.Tables.Add(this.tabletbl_rol_usuario);
+            this.relationFK_tbl_rol_opcion_tbl_opciones = new global::System.Data.DataRelation("FK_tbl_rol_opcion_tbl_opciones", new global::System.Data.DataColumn[] {
+                        this.tabletbl_opciones.id_opcionesColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_rol_opcion.id_opcionColumn}, false);
+            this.Relations.Add(this.relationFK_tbl_rol_opcion_tbl_opciones);
+            this.relationFK_tbl_rol_opcion_tbl_rol = new global::System.Data.DataRelation("FK_tbl_rol_opcion_tbl_rol", new global::System.Data.DataColumn[] {
+                        this.tabletbl_rol.id_rolColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_rol_opcion.id_rolColumn}, false);
+            this.Relations.Add(this.relationFK_tbl_rol_opcion_tbl_rol);
+            this.relationFK_tbl_rol_usuario_tbl_rol = new global::System.Data.DataRelation("FK_tbl_rol_usuario_tbl_rol", new global::System.Data.DataColumn[] {
+                        this.tabletbl_rol.id_rolColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_rol_usuario.id_rolColumn}, false);
+            this.Relations.Add(this.relationFK_tbl_rol_usuario_tbl_rol);
+            this.relationFK_tbl_rol_usuario_tbl_usuario = new global::System.Data.DataRelation("FK_tbl_rol_usuario_tbl_usuario", new global::System.Data.DataColumn[] {
+                        this.tabletbl_usuario.id_usuarioColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_rol_usuario.id_usuarioColumn}, false);
+            this.Relations.Add(this.relationFK_tbl_rol_usuario_tbl_usuario);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetbl_arqueocaja() {
+        private bool ShouldSerializetbl_usuario() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetbl_ingreso_com() {
+        private bool ShouldSerializetbl_rol() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetbl_listaprecio() {
+        private bool ShouldSerializetbl_opciones() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetbl_kermesse() {
+        private bool ShouldSerializetbl_rol_opcion() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetbl_gastos() {
+        private bool ShouldSerializetbl_rol_usuario() {
             return false;
         }
         
@@ -419,53 +426,45 @@ namespace KermesseApp.Reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void tbl_arqueocajaRowChangeEventHandler(object sender, tbl_arqueocajaRowChangeEvent e);
+        public delegate void tbl_usuarioRowChangeEventHandler(object sender, tbl_usuarioRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void tbl_ingreso_comRowChangeEventHandler(object sender, tbl_ingreso_comRowChangeEvent e);
+        public delegate void tbl_rolRowChangeEventHandler(object sender, tbl_rolRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void tbl_listaprecioRowChangeEventHandler(object sender, tbl_listaprecioRowChangeEvent e);
+        public delegate void tbl_opcionesRowChangeEventHandler(object sender, tbl_opcionesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void tbl_kermesseRowChangeEventHandler(object sender, tbl_kermesseRowChangeEvent e);
+        public delegate void tbl_rol_opcionRowChangeEventHandler(object sender, tbl_rol_opcionRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void tbl_gastosRowChangeEventHandler(object sender, tbl_gastosRowChangeEvent e);
+        public delegate void tbl_rol_usuarioRowChangeEventHandler(object sender, tbl_rol_usuarioRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tbl_arqueocajaDataTable : global::System.Data.TypedTableBase<tbl_arqueocajaRow> {
+        public partial class tbl_usuarioDataTable : global::System.Data.TypedTableBase<tbl_usuarioRow> {
             
-            private global::System.Data.DataColumn columnid_arqueocaja;
+            private global::System.Data.DataColumn columnid_usuario;
             
-            private global::System.Data.DataColumn columnidkermesse;
+            private global::System.Data.DataColumn columnusuario;
             
-            private global::System.Data.DataColumn columnfecha_arqueo;
+            private global::System.Data.DataColumn columnpwd;
             
-            private global::System.Data.DataColumn columngran_total;
+            private global::System.Data.DataColumn columnnombres;
             
-            private global::System.Data.DataColumn columnusuario_creacion;
+            private global::System.Data.DataColumn columnapellidos;
             
-            private global::System.Data.DataColumn columnfecha_creacion;
-            
-            private global::System.Data.DataColumn columnusuario_modificacion;
-            
-            private global::System.Data.DataColumn columnfecha_modificacion;
-            
-            private global::System.Data.DataColumn columnusuario_eliminacion;
-            
-            private global::System.Data.DataColumn columnfecha_eliminacion;
+            private global::System.Data.DataColumn columnemail;
             
             private global::System.Data.DataColumn columnestado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_arqueocajaDataTable() {
-                this.TableName = "tbl_arqueocaja";
+            public tbl_usuarioDataTable() {
+                this.TableName = "tbl_usuario";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -473,7 +472,7 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_arqueocajaDataTable(global::System.Data.DataTable table) {
+            internal tbl_usuarioDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -490,88 +489,56 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected tbl_arqueocajaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tbl_usuarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_arqueocajaColumn {
+            public global::System.Data.DataColumn id_usuarioColumn {
                 get {
-                    return this.columnid_arqueocaja;
+                    return this.columnid_usuario;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idkermesseColumn {
+            public global::System.Data.DataColumn usuarioColumn {
                 get {
-                    return this.columnidkermesse;
+                    return this.columnusuario;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_arqueoColumn {
+            public global::System.Data.DataColumn pwdColumn {
                 get {
-                    return this.columnfecha_arqueo;
+                    return this.columnpwd;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn gran_totalColumn {
+            public global::System.Data.DataColumn nombresColumn {
                 get {
-                    return this.columngran_total;
+                    return this.columnnombres;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_creacionColumn {
+            public global::System.Data.DataColumn apellidosColumn {
                 get {
-                    return this.columnusuario_creacion;
+                    return this.columnapellidos;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_creacionColumn {
+            public global::System.Data.DataColumn emailColumn {
                 get {
-                    return this.columnfecha_creacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_modificacionColumn {
-                get {
-                    return this.columnusuario_modificacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_modificacionColumn {
-                get {
-                    return this.columnfecha_modificacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_eliminacionColumn {
-                get {
-                    return this.columnusuario_eliminacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_eliminacionColumn {
-                get {
-                    return this.columnfecha_eliminacion;
+                    return this.columnemail;
                 }
             }
             
@@ -594,62 +561,58 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_arqueocajaRow this[int index] {
+            public tbl_usuarioRow this[int index] {
                 get {
-                    return ((tbl_arqueocajaRow)(this.Rows[index]));
+                    return ((tbl_usuarioRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_arqueocajaRowChangeEventHandler tbl_arqueocajaRowChanging;
+            public event tbl_usuarioRowChangeEventHandler tbl_usuarioRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_arqueocajaRowChangeEventHandler tbl_arqueocajaRowChanged;
+            public event tbl_usuarioRowChangeEventHandler tbl_usuarioRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_arqueocajaRowChangeEventHandler tbl_arqueocajaRowDeleting;
+            public event tbl_usuarioRowChangeEventHandler tbl_usuarioRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_arqueocajaRowChangeEventHandler tbl_arqueocajaRowDeleted;
+            public event tbl_usuarioRowChangeEventHandler tbl_usuarioRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addtbl_arqueocajaRow(tbl_arqueocajaRow row) {
+            public void Addtbl_usuarioRow(tbl_usuarioRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_arqueocajaRow Addtbl_arqueocajaRow(int idkermesse, System.DateTime fecha_arqueo, decimal gran_total, int usuario_creacion, System.DateTime fecha_creacion, int usuario_modificacion, System.DateTime fecha_modificacion, int usuario_eliminacion, System.DateTime fecha_eliminacion, int estado) {
-                tbl_arqueocajaRow rowtbl_arqueocajaRow = ((tbl_arqueocajaRow)(this.NewRow()));
+            public tbl_usuarioRow Addtbl_usuarioRow(string usuario, string pwd, string nombres, string apellidos, string email, int estado) {
+                tbl_usuarioRow rowtbl_usuarioRow = ((tbl_usuarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        idkermesse,
-                        fecha_arqueo,
-                        gran_total,
-                        usuario_creacion,
-                        fecha_creacion,
-                        usuario_modificacion,
-                        fecha_modificacion,
-                        usuario_eliminacion,
-                        fecha_eliminacion,
+                        usuario,
+                        pwd,
+                        nombres,
+                        apellidos,
+                        email,
                         estado};
-                rowtbl_arqueocajaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtbl_arqueocajaRow);
-                return rowtbl_arqueocajaRow;
+                rowtbl_usuarioRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_usuarioRow);
+                return rowtbl_usuarioRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_arqueocajaRow FindByid_arqueocaja(int id_arqueocaja) {
-                return ((tbl_arqueocajaRow)(this.Rows.Find(new object[] {
-                            id_arqueocaja})));
+            public tbl_usuarioRow FindByid_usuario(int id_usuario) {
+                return ((tbl_usuarioRow)(this.Rows.Find(new object[] {
+                            id_usuario})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tbl_arqueocajaDataTable cln = ((tbl_arqueocajaDataTable)(base.Clone()));
+                tbl_usuarioDataTable cln = ((tbl_usuarioDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -657,90 +620,83 @@ namespace KermesseApp.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tbl_arqueocajaDataTable();
+                return new tbl_usuarioDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnid_arqueocaja = base.Columns["id_arqueocaja"];
-                this.columnidkermesse = base.Columns["idkermesse"];
-                this.columnfecha_arqueo = base.Columns["fecha_arqueo"];
-                this.columngran_total = base.Columns["gran_total"];
-                this.columnusuario_creacion = base.Columns["usuario_creacion"];
-                this.columnfecha_creacion = base.Columns["fecha_creacion"];
-                this.columnusuario_modificacion = base.Columns["usuario_modificacion"];
-                this.columnfecha_modificacion = base.Columns["fecha_modificacion"];
-                this.columnusuario_eliminacion = base.Columns["usuario_eliminacion"];
-                this.columnfecha_eliminacion = base.Columns["fecha_eliminacion"];
+                this.columnid_usuario = base.Columns["id_usuario"];
+                this.columnusuario = base.Columns["usuario"];
+                this.columnpwd = base.Columns["pwd"];
+                this.columnnombres = base.Columns["nombres"];
+                this.columnapellidos = base.Columns["apellidos"];
+                this.columnemail = base.Columns["email"];
                 this.columnestado = base.Columns["estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnid_arqueocaja = new global::System.Data.DataColumn("id_arqueocaja", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_arqueocaja);
-                this.columnidkermesse = new global::System.Data.DataColumn("idkermesse", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidkermesse);
-                this.columnfecha_arqueo = new global::System.Data.DataColumn("fecha_arqueo", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_arqueo);
-                this.columngran_total = new global::System.Data.DataColumn("gran_total", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columngran_total);
-                this.columnusuario_creacion = new global::System.Data.DataColumn("usuario_creacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_creacion);
-                this.columnfecha_creacion = new global::System.Data.DataColumn("fecha_creacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_creacion);
-                this.columnusuario_modificacion = new global::System.Data.DataColumn("usuario_modificacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_modificacion);
-                this.columnfecha_modificacion = new global::System.Data.DataColumn("fecha_modificacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_modificacion);
-                this.columnusuario_eliminacion = new global::System.Data.DataColumn("usuario_eliminacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_eliminacion);
-                this.columnfecha_eliminacion = new global::System.Data.DataColumn("fecha_eliminacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_eliminacion);
+                this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_usuario);
+                this.columnusuario = new global::System.Data.DataColumn("usuario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusuario);
+                this.columnpwd = new global::System.Data.DataColumn("pwd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpwd);
+                this.columnnombres = new global::System.Data.DataColumn("nombres", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombres);
+                this.columnapellidos = new global::System.Data.DataColumn("apellidos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapellidos);
+                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnemail);
                 this.columnestado = new global::System.Data.DataColumn("estado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_arqueocaja}, true));
-                this.columnid_arqueocaja.AutoIncrement = true;
-                this.columnid_arqueocaja.AutoIncrementSeed = -1;
-                this.columnid_arqueocaja.AutoIncrementStep = -1;
-                this.columnid_arqueocaja.AllowDBNull = false;
-                this.columnid_arqueocaja.ReadOnly = true;
-                this.columnid_arqueocaja.Unique = true;
-                this.columnidkermesse.AllowDBNull = false;
-                this.columnfecha_arqueo.AllowDBNull = false;
-                this.columngran_total.AllowDBNull = false;
-                this.columnusuario_creacion.AllowDBNull = false;
-                this.columnfecha_creacion.AllowDBNull = false;
+                                this.columnid_usuario}, true));
+                this.columnid_usuario.AutoIncrement = true;
+                this.columnid_usuario.AutoIncrementSeed = -1;
+                this.columnid_usuario.AutoIncrementStep = -1;
+                this.columnid_usuario.AllowDBNull = false;
+                this.columnid_usuario.ReadOnly = true;
+                this.columnid_usuario.Unique = true;
+                this.columnusuario.AllowDBNull = false;
+                this.columnusuario.MaxLength = 50;
+                this.columnpwd.AllowDBNull = false;
+                this.columnpwd.MaxLength = 50;
+                this.columnnombres.AllowDBNull = false;
+                this.columnnombres.MaxLength = 50;
+                this.columnapellidos.AllowDBNull = false;
+                this.columnapellidos.MaxLength = 50;
+                this.columnemail.AllowDBNull = false;
+                this.columnemail.MaxLength = 50;
                 this.columnestado.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_arqueocajaRow Newtbl_arqueocajaRow() {
-                return ((tbl_arqueocajaRow)(this.NewRow()));
+            public tbl_usuarioRow Newtbl_usuarioRow() {
+                return ((tbl_usuarioRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tbl_arqueocajaRow(builder);
+                return new tbl_usuarioRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tbl_arqueocajaRow);
+                return typeof(tbl_usuarioRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tbl_arqueocajaRowChanged != null)) {
-                    this.tbl_arqueocajaRowChanged(this, new tbl_arqueocajaRowChangeEvent(((tbl_arqueocajaRow)(e.Row)), e.Action));
+                if ((this.tbl_usuarioRowChanged != null)) {
+                    this.tbl_usuarioRowChanged(this, new tbl_usuarioRowChangeEvent(((tbl_usuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -748,8 +704,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tbl_arqueocajaRowChanging != null)) {
-                    this.tbl_arqueocajaRowChanging(this, new tbl_arqueocajaRowChangeEvent(((tbl_arqueocajaRow)(e.Row)), e.Action));
+                if ((this.tbl_usuarioRowChanging != null)) {
+                    this.tbl_usuarioRowChanging(this, new tbl_usuarioRowChangeEvent(((tbl_usuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -757,8 +713,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tbl_arqueocajaRowDeleted != null)) {
-                    this.tbl_arqueocajaRowDeleted(this, new tbl_arqueocajaRowChangeEvent(((tbl_arqueocajaRow)(e.Row)), e.Action));
+                if ((this.tbl_usuarioRowDeleted != null)) {
+                    this.tbl_usuarioRowDeleted(this, new tbl_usuarioRowChangeEvent(((tbl_usuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -766,14 +722,14 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tbl_arqueocajaRowDeleting != null)) {
-                    this.tbl_arqueocajaRowDeleting(this, new tbl_arqueocajaRowChangeEvent(((tbl_arqueocajaRow)(e.Row)), e.Action));
+                if ((this.tbl_usuarioRowDeleting != null)) {
+                    this.tbl_usuarioRowDeleting(this, new tbl_usuarioRowChangeEvent(((tbl_usuarioRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removetbl_arqueocajaRow(tbl_arqueocajaRow row) {
+            public void Removetbl_usuarioRow(tbl_usuarioRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -800,7 +756,7 @@ namespace KermesseApp.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tbl_arqueocajaDataTable";
+                attribute2.FixedValue = "tbl_usuarioDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -846,40 +802,18 @@ namespace KermesseApp.Reportes {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tbl_ingreso_comDataTable : global::System.Data.TypedTableBase<tbl_ingreso_comRow> {
+        public partial class tbl_rolDataTable : global::System.Data.TypedTableBase<tbl_rolRow> {
             
-            private global::System.Data.DataColumn columnid_ingresocom;
+            private global::System.Data.DataColumn columnid_rol;
             
-            private global::System.Data.DataColumn columnid_kermesse;
-            
-            private global::System.Data.DataColumn columnid_comunidad;
-            
-            private global::System.Data.DataColumn columnid_producto;
-            
-            private global::System.Data.DataColumn columncant_producto;
-            
-            private global::System.Data.DataColumn columnprecio_producto;
-            
-            private global::System.Data.DataColumn columntotal_bonos;
-            
-            private global::System.Data.DataColumn columnusuario_creacion;
-            
-            private global::System.Data.DataColumn columnusuario_modificacion;
-            
-            private global::System.Data.DataColumn columnusuario_eliminacion;
-            
-            private global::System.Data.DataColumn columnfecha_creacion;
-            
-            private global::System.Data.DataColumn columnfecha_modificacion;
-            
-            private global::System.Data.DataColumn columnfecha_eliminacion;
+            private global::System.Data.DataColumn columnrol;
             
             private global::System.Data.DataColumn columnestado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_ingreso_comDataTable() {
-                this.TableName = "tbl_ingreso_com";
+            public tbl_rolDataTable() {
+                this.TableName = "tbl_rol";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -887,7 +821,7 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_ingreso_comDataTable(global::System.Data.DataTable table) {
+            internal tbl_rolDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -904,112 +838,24 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected tbl_ingreso_comDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tbl_rolDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_ingresocomColumn {
+            public global::System.Data.DataColumn id_rolColumn {
                 get {
-                    return this.columnid_ingresocom;
+                    return this.columnid_rol;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_kermesseColumn {
+            public global::System.Data.DataColumn rolColumn {
                 get {
-                    return this.columnid_kermesse;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_comunidadColumn {
-                get {
-                    return this.columnid_comunidad;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_productoColumn {
-                get {
-                    return this.columnid_producto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn cant_productoColumn {
-                get {
-                    return this.columncant_producto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn precio_productoColumn {
-                get {
-                    return this.columnprecio_producto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn total_bonosColumn {
-                get {
-                    return this.columntotal_bonos;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_creacionColumn {
-                get {
-                    return this.columnusuario_creacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_modificacionColumn {
-                get {
-                    return this.columnusuario_modificacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_eliminacionColumn {
-                get {
-                    return this.columnusuario_eliminacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_creacionColumn {
-                get {
-                    return this.columnfecha_creacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_modificacionColumn {
-                get {
-                    return this.columnfecha_modificacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_eliminacionColumn {
-                get {
-                    return this.columnfecha_eliminacion;
+                    return this.columnrol;
                 }
             }
             
@@ -1032,68 +878,54 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_ingreso_comRow this[int index] {
+            public tbl_rolRow this[int index] {
                 get {
-                    return ((tbl_ingreso_comRow)(this.Rows[index]));
+                    return ((tbl_rolRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_ingreso_comRowChangeEventHandler tbl_ingreso_comRowChanging;
+            public event tbl_rolRowChangeEventHandler tbl_rolRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_ingreso_comRowChangeEventHandler tbl_ingreso_comRowChanged;
+            public event tbl_rolRowChangeEventHandler tbl_rolRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_ingreso_comRowChangeEventHandler tbl_ingreso_comRowDeleting;
+            public event tbl_rolRowChangeEventHandler tbl_rolRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_ingreso_comRowChangeEventHandler tbl_ingreso_comRowDeleted;
+            public event tbl_rolRowChangeEventHandler tbl_rolRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addtbl_ingreso_comRow(tbl_ingreso_comRow row) {
+            public void Addtbl_rolRow(tbl_rolRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_ingreso_comRow Addtbl_ingreso_comRow(tbl_kermesseRow parenttbl_kermesseRowByFK_tbl_ingreso_com_tbl_kermesse, int id_comunidad, int id_producto, int cant_producto, decimal precio_producto, int total_bonos, int usuario_creacion, int usuario_modificacion, int usuario_eliminacion, System.DateTime fecha_creacion, System.DateTime fecha_modificacion, System.DateTime fecha_eliminacion, int estado) {
-                tbl_ingreso_comRow rowtbl_ingreso_comRow = ((tbl_ingreso_comRow)(this.NewRow()));
+            public tbl_rolRow Addtbl_rolRow(string rol, int estado) {
+                tbl_rolRow rowtbl_rolRow = ((tbl_rolRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
-                        id_comunidad,
-                        id_producto,
-                        cant_producto,
-                        precio_producto,
-                        total_bonos,
-                        usuario_creacion,
-                        usuario_modificacion,
-                        usuario_eliminacion,
-                        fecha_creacion,
-                        fecha_modificacion,
-                        fecha_eliminacion,
+                        rol,
                         estado};
-                if ((parenttbl_kermesseRowByFK_tbl_ingreso_com_tbl_kermesse != null)) {
-                    columnValuesArray[1] = parenttbl_kermesseRowByFK_tbl_ingreso_com_tbl_kermesse[0];
-                }
-                rowtbl_ingreso_comRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtbl_ingreso_comRow);
-                return rowtbl_ingreso_comRow;
+                rowtbl_rolRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_rolRow);
+                return rowtbl_rolRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_ingreso_comRow FindByid_ingresocom(int id_ingresocom) {
-                return ((tbl_ingreso_comRow)(this.Rows.Find(new object[] {
-                            id_ingresocom})));
+            public tbl_rolRow FindByid_rol(int id_rol) {
+                return ((tbl_rolRow)(this.Rows.Find(new object[] {
+                            id_rol})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tbl_ingreso_comDataTable cln = ((tbl_ingreso_comDataTable)(base.Clone()));
+                tbl_rolDataTable cln = ((tbl_rolDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1101,101 +933,63 @@ namespace KermesseApp.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tbl_ingreso_comDataTable();
+                return new tbl_rolDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnid_ingresocom = base.Columns["id_ingresocom"];
-                this.columnid_kermesse = base.Columns["id_kermesse"];
-                this.columnid_comunidad = base.Columns["id_comunidad"];
-                this.columnid_producto = base.Columns["id_producto"];
-                this.columncant_producto = base.Columns["cant_producto"];
-                this.columnprecio_producto = base.Columns["precio_producto"];
-                this.columntotal_bonos = base.Columns["total_bonos"];
-                this.columnusuario_creacion = base.Columns["usuario_creacion"];
-                this.columnusuario_modificacion = base.Columns["usuario_modificacion"];
-                this.columnusuario_eliminacion = base.Columns["usuario_eliminacion"];
-                this.columnfecha_creacion = base.Columns["fecha_creacion"];
-                this.columnfecha_modificacion = base.Columns["fecha_modificacion"];
-                this.columnfecha_eliminacion = base.Columns["fecha_eliminacion"];
+                this.columnid_rol = base.Columns["id_rol"];
+                this.columnrol = base.Columns["rol"];
                 this.columnestado = base.Columns["estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnid_ingresocom = new global::System.Data.DataColumn("id_ingresocom", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_ingresocom);
-                this.columnid_kermesse = new global::System.Data.DataColumn("id_kermesse", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_kermesse);
-                this.columnid_comunidad = new global::System.Data.DataColumn("id_comunidad", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_comunidad);
-                this.columnid_producto = new global::System.Data.DataColumn("id_producto", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_producto);
-                this.columncant_producto = new global::System.Data.DataColumn("cant_producto", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncant_producto);
-                this.columnprecio_producto = new global::System.Data.DataColumn("precio_producto", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprecio_producto);
-                this.columntotal_bonos = new global::System.Data.DataColumn("total_bonos", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotal_bonos);
-                this.columnusuario_creacion = new global::System.Data.DataColumn("usuario_creacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_creacion);
-                this.columnusuario_modificacion = new global::System.Data.DataColumn("usuario_modificacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_modificacion);
-                this.columnusuario_eliminacion = new global::System.Data.DataColumn("usuario_eliminacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_eliminacion);
-                this.columnfecha_creacion = new global::System.Data.DataColumn("fecha_creacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_creacion);
-                this.columnfecha_modificacion = new global::System.Data.DataColumn("fecha_modificacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_modificacion);
-                this.columnfecha_eliminacion = new global::System.Data.DataColumn("fecha_eliminacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_eliminacion);
+                this.columnid_rol = new global::System.Data.DataColumn("id_rol", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_rol);
+                this.columnrol = new global::System.Data.DataColumn("rol", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrol);
                 this.columnestado = new global::System.Data.DataColumn("estado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_ingresocom}, true));
-                this.columnid_ingresocom.AutoIncrement = true;
-                this.columnid_ingresocom.AutoIncrementSeed = -1;
-                this.columnid_ingresocom.AutoIncrementStep = -1;
-                this.columnid_ingresocom.AllowDBNull = false;
-                this.columnid_ingresocom.ReadOnly = true;
-                this.columnid_ingresocom.Unique = true;
-                this.columnid_kermesse.AllowDBNull = false;
-                this.columnid_comunidad.AllowDBNull = false;
-                this.columnid_producto.AllowDBNull = false;
-                this.columncant_producto.AllowDBNull = false;
-                this.columntotal_bonos.AllowDBNull = false;
-                this.columnusuario_creacion.AllowDBNull = false;
-                this.columnfecha_creacion.AllowDBNull = false;
+                                this.columnid_rol}, true));
+                this.columnid_rol.AutoIncrement = true;
+                this.columnid_rol.AutoIncrementSeed = -1;
+                this.columnid_rol.AutoIncrementStep = -1;
+                this.columnid_rol.AllowDBNull = false;
+                this.columnid_rol.ReadOnly = true;
+                this.columnid_rol.Unique = true;
+                this.columnrol.AllowDBNull = false;
+                this.columnrol.MaxLength = 100;
                 this.columnestado.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_ingreso_comRow Newtbl_ingreso_comRow() {
-                return ((tbl_ingreso_comRow)(this.NewRow()));
+            public tbl_rolRow Newtbl_rolRow() {
+                return ((tbl_rolRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tbl_ingreso_comRow(builder);
+                return new tbl_rolRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tbl_ingreso_comRow);
+                return typeof(tbl_rolRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tbl_ingreso_comRowChanged != null)) {
-                    this.tbl_ingreso_comRowChanged(this, new tbl_ingreso_comRowChangeEvent(((tbl_ingreso_comRow)(e.Row)), e.Action));
+                if ((this.tbl_rolRowChanged != null)) {
+                    this.tbl_rolRowChanged(this, new tbl_rolRowChangeEvent(((tbl_rolRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1203,8 +997,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tbl_ingreso_comRowChanging != null)) {
-                    this.tbl_ingreso_comRowChanging(this, new tbl_ingreso_comRowChangeEvent(((tbl_ingreso_comRow)(e.Row)), e.Action));
+                if ((this.tbl_rolRowChanging != null)) {
+                    this.tbl_rolRowChanging(this, new tbl_rolRowChangeEvent(((tbl_rolRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1212,8 +1006,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tbl_ingreso_comRowDeleted != null)) {
-                    this.tbl_ingreso_comRowDeleted(this, new tbl_ingreso_comRowChangeEvent(((tbl_ingreso_comRow)(e.Row)), e.Action));
+                if ((this.tbl_rolRowDeleted != null)) {
+                    this.tbl_rolRowDeleted(this, new tbl_rolRowChangeEvent(((tbl_rolRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1221,14 +1015,14 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tbl_ingreso_comRowDeleting != null)) {
-                    this.tbl_ingreso_comRowDeleting(this, new tbl_ingreso_comRowChangeEvent(((tbl_ingreso_comRow)(e.Row)), e.Action));
+                if ((this.tbl_rolRowDeleting != null)) {
+                    this.tbl_rolRowDeleting(this, new tbl_rolRowChangeEvent(((tbl_rolRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removetbl_ingreso_comRow(tbl_ingreso_comRow row) {
+            public void Removetbl_rolRow(tbl_rolRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1255,7 +1049,7 @@ namespace KermesseApp.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tbl_ingreso_comDataTable";
+                attribute2.FixedValue = "tbl_rolDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1301,22 +1095,18 @@ namespace KermesseApp.Reportes {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tbl_listaprecioDataTable : global::System.Data.TypedTableBase<tbl_listaprecioRow> {
+        public partial class tbl_opcionesDataTable : global::System.Data.TypedTableBase<tbl_opcionesRow> {
             
-            private global::System.Data.DataColumn columnid_listaprecio;
+            private global::System.Data.DataColumn columnid_opciones;
             
-            private global::System.Data.DataColumn columnid_kermesse;
-            
-            private global::System.Data.DataColumn columnnombre;
-            
-            private global::System.Data.DataColumn columndescripcion;
+            private global::System.Data.DataColumn columnopcion;
             
             private global::System.Data.DataColumn columnestado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_listaprecioDataTable() {
-                this.TableName = "tbl_listaprecio";
+            public tbl_opcionesDataTable() {
+                this.TableName = "tbl_opciones";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1324,7 +1114,7 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_listaprecioDataTable(global::System.Data.DataTable table) {
+            internal tbl_opcionesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1341,40 +1131,24 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected tbl_listaprecioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tbl_opcionesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_listaprecioColumn {
+            public global::System.Data.DataColumn id_opcionesColumn {
                 get {
-                    return this.columnid_listaprecio;
+                    return this.columnid_opciones;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_kermesseColumn {
+            public global::System.Data.DataColumn opcionColumn {
                 get {
-                    return this.columnid_kermesse;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
-                get {
-                    return this.columnnombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn descripcionColumn {
-                get {
-                    return this.columndescripcion;
+                    return this.columnopcion;
                 }
             }
             
@@ -1397,59 +1171,54 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_listaprecioRow this[int index] {
+            public tbl_opcionesRow this[int index] {
                 get {
-                    return ((tbl_listaprecioRow)(this.Rows[index]));
+                    return ((tbl_opcionesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_listaprecioRowChangeEventHandler tbl_listaprecioRowChanging;
+            public event tbl_opcionesRowChangeEventHandler tbl_opcionesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_listaprecioRowChangeEventHandler tbl_listaprecioRowChanged;
+            public event tbl_opcionesRowChangeEventHandler tbl_opcionesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_listaprecioRowChangeEventHandler tbl_listaprecioRowDeleting;
+            public event tbl_opcionesRowChangeEventHandler tbl_opcionesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_listaprecioRowChangeEventHandler tbl_listaprecioRowDeleted;
+            public event tbl_opcionesRowChangeEventHandler tbl_opcionesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addtbl_listaprecioRow(tbl_listaprecioRow row) {
+            public void Addtbl_opcionesRow(tbl_opcionesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_listaprecioRow Addtbl_listaprecioRow(tbl_kermesseRow parenttbl_kermesseRowByFK_tbl_listaprecio_tbl_kermesse, string nombre, string descripcion, int estado) {
-                tbl_listaprecioRow rowtbl_listaprecioRow = ((tbl_listaprecioRow)(this.NewRow()));
+            public tbl_opcionesRow Addtbl_opcionesRow(string opcion, int estado) {
+                tbl_opcionesRow rowtbl_opcionesRow = ((tbl_opcionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
-                        nombre,
-                        descripcion,
+                        opcion,
                         estado};
-                if ((parenttbl_kermesseRowByFK_tbl_listaprecio_tbl_kermesse != null)) {
-                    columnValuesArray[1] = parenttbl_kermesseRowByFK_tbl_listaprecio_tbl_kermesse[0];
-                }
-                rowtbl_listaprecioRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtbl_listaprecioRow);
-                return rowtbl_listaprecioRow;
+                rowtbl_opcionesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_opcionesRow);
+                return rowtbl_opcionesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_listaprecioRow FindByid_listaprecio(int id_listaprecio) {
-                return ((tbl_listaprecioRow)(this.Rows.Find(new object[] {
-                            id_listaprecio})));
+            public tbl_opcionesRow FindByid_opciones(int id_opciones) {
+                return ((tbl_opcionesRow)(this.Rows.Find(new object[] {
+                            id_opciones})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tbl_listaprecioDataTable cln = ((tbl_listaprecioDataTable)(base.Clone()));
+                tbl_opcionesDataTable cln = ((tbl_opcionesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1457,72 +1226,63 @@ namespace KermesseApp.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tbl_listaprecioDataTable();
+                return new tbl_opcionesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnid_listaprecio = base.Columns["id_listaprecio"];
-                this.columnid_kermesse = base.Columns["id_kermesse"];
-                this.columnnombre = base.Columns["nombre"];
-                this.columndescripcion = base.Columns["descripcion"];
+                this.columnid_opciones = base.Columns["id_opciones"];
+                this.columnopcion = base.Columns["opcion"];
                 this.columnestado = base.Columns["estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnid_listaprecio = new global::System.Data.DataColumn("id_listaprecio", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_listaprecio);
-                this.columnid_kermesse = new global::System.Data.DataColumn("id_kermesse", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_kermesse);
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndescripcion);
+                this.columnid_opciones = new global::System.Data.DataColumn("id_opciones", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_opciones);
+                this.columnopcion = new global::System.Data.DataColumn("opcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnopcion);
                 this.columnestado = new global::System.Data.DataColumn("estado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_listaprecio}, true));
-                this.columnid_listaprecio.AutoIncrement = true;
-                this.columnid_listaprecio.AutoIncrementSeed = -1;
-                this.columnid_listaprecio.AutoIncrementStep = -1;
-                this.columnid_listaprecio.AllowDBNull = false;
-                this.columnid_listaprecio.ReadOnly = true;
-                this.columnid_listaprecio.Unique = true;
-                this.columnid_kermesse.AllowDBNull = false;
-                this.columnnombre.AllowDBNull = false;
-                this.columnnombre.MaxLength = 100;
-                this.columndescripcion.AllowDBNull = false;
-                this.columndescripcion.MaxLength = 200;
+                                this.columnid_opciones}, true));
+                this.columnid_opciones.AutoIncrement = true;
+                this.columnid_opciones.AutoIncrementSeed = -1;
+                this.columnid_opciones.AutoIncrementStep = -1;
+                this.columnid_opciones.AllowDBNull = false;
+                this.columnid_opciones.ReadOnly = true;
+                this.columnid_opciones.Unique = true;
+                this.columnopcion.AllowDBNull = false;
+                this.columnopcion.MaxLength = 50;
                 this.columnestado.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_listaprecioRow Newtbl_listaprecioRow() {
-                return ((tbl_listaprecioRow)(this.NewRow()));
+            public tbl_opcionesRow Newtbl_opcionesRow() {
+                return ((tbl_opcionesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tbl_listaprecioRow(builder);
+                return new tbl_opcionesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tbl_listaprecioRow);
+                return typeof(tbl_opcionesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tbl_listaprecioRowChanged != null)) {
-                    this.tbl_listaprecioRowChanged(this, new tbl_listaprecioRowChangeEvent(((tbl_listaprecioRow)(e.Row)), e.Action));
+                if ((this.tbl_opcionesRowChanged != null)) {
+                    this.tbl_opcionesRowChanged(this, new tbl_opcionesRowChangeEvent(((tbl_opcionesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1530,8 +1290,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tbl_listaprecioRowChanging != null)) {
-                    this.tbl_listaprecioRowChanging(this, new tbl_listaprecioRowChangeEvent(((tbl_listaprecioRow)(e.Row)), e.Action));
+                if ((this.tbl_opcionesRowChanging != null)) {
+                    this.tbl_opcionesRowChanging(this, new tbl_opcionesRowChangeEvent(((tbl_opcionesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1539,8 +1299,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tbl_listaprecioRowDeleted != null)) {
-                    this.tbl_listaprecioRowDeleted(this, new tbl_listaprecioRowChangeEvent(((tbl_listaprecioRow)(e.Row)), e.Action));
+                if ((this.tbl_opcionesRowDeleted != null)) {
+                    this.tbl_opcionesRowDeleted(this, new tbl_opcionesRowChangeEvent(((tbl_opcionesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1548,14 +1308,14 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tbl_listaprecioRowDeleting != null)) {
-                    this.tbl_listaprecioRowDeleting(this, new tbl_listaprecioRowChangeEvent(((tbl_listaprecioRow)(e.Row)), e.Action));
+                if ((this.tbl_opcionesRowDeleting != null)) {
+                    this.tbl_opcionesRowDeleting(this, new tbl_opcionesRowChangeEvent(((tbl_opcionesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removetbl_listaprecioRow(tbl_listaprecioRow row) {
+            public void Removetbl_opcionesRow(tbl_opcionesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1582,7 +1342,7 @@ namespace KermesseApp.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tbl_listaprecioDataTable";
+                attribute2.FixedValue = "tbl_opcionesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1628,38 +1388,18 @@ namespace KermesseApp.Reportes {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tbl_kermesseDataTable : global::System.Data.TypedTableBase<tbl_kermesseRow> {
+        public partial class tbl_rol_opcionDataTable : global::System.Data.TypedTableBase<tbl_rol_opcionRow> {
             
-            private global::System.Data.DataColumn columnid_kermesse;
+            private global::System.Data.DataColumn columnid_rol_opcion;
             
-            private global::System.Data.DataColumn columnid_parroquia;
+            private global::System.Data.DataColumn columnid_rol;
             
-            private global::System.Data.DataColumn columnnombre;
-            
-            private global::System.Data.DataColumn columnfecha_inicio;
-            
-            private global::System.Data.DataColumn columnfecha_fin;
-            
-            private global::System.Data.DataColumn columndesc_general;
-            
-            private global::System.Data.DataColumn columnestado;
-            
-            private global::System.Data.DataColumn columnusuario_creacion;
-            
-            private global::System.Data.DataColumn columnusuario_modificacion;
-            
-            private global::System.Data.DataColumn columnusuario_eliminacion;
-            
-            private global::System.Data.DataColumn columnfecha_creacion;
-            
-            private global::System.Data.DataColumn columnfecha_modificacion;
-            
-            private global::System.Data.DataColumn columnfecha_eliminacion;
+            private global::System.Data.DataColumn columnid_opcion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseDataTable() {
-                this.TableName = "tbl_kermesse";
+            public tbl_rol_opcionDataTable() {
+                this.TableName = "tbl_rol_opcion";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1667,7 +1407,7 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_kermesseDataTable(global::System.Data.DataTable table) {
+            internal tbl_rol_opcionDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1684,112 +1424,32 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected tbl_kermesseDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tbl_rol_opcionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_kermesseColumn {
+            public global::System.Data.DataColumn id_rol_opcionColumn {
                 get {
-                    return this.columnid_kermesse;
+                    return this.columnid_rol_opcion;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_parroquiaColumn {
+            public global::System.Data.DataColumn id_rolColumn {
                 get {
-                    return this.columnid_parroquia;
+                    return this.columnid_rol;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
+            public global::System.Data.DataColumn id_opcionColumn {
                 get {
-                    return this.columnnombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_inicioColumn {
-                get {
-                    return this.columnfecha_inicio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_finColumn {
-                get {
-                    return this.columnfecha_fin;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn desc_generalColumn {
-                get {
-                    return this.columndesc_general;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn estadoColumn {
-                get {
-                    return this.columnestado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_creacionColumn {
-                get {
-                    return this.columnusuario_creacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_modificacionColumn {
-                get {
-                    return this.columnusuario_modificacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_eliminacionColumn {
-                get {
-                    return this.columnusuario_eliminacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_creacionColumn {
-                get {
-                    return this.columnfecha_creacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_modificacionColumn {
-                get {
-                    return this.columnfecha_modificacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_eliminacionColumn {
-                get {
-                    return this.columnfecha_eliminacion;
+                    return this.columnid_opcion;
                 }
             }
             
@@ -1804,64 +1464,60 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseRow this[int index] {
+            public tbl_rol_opcionRow this[int index] {
                 get {
-                    return ((tbl_kermesseRow)(this.Rows[index]));
+                    return ((tbl_rol_opcionRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_kermesseRowChangeEventHandler tbl_kermesseRowChanging;
+            public event tbl_rol_opcionRowChangeEventHandler tbl_rol_opcionRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_kermesseRowChangeEventHandler tbl_kermesseRowChanged;
+            public event tbl_rol_opcionRowChangeEventHandler tbl_rol_opcionRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_kermesseRowChangeEventHandler tbl_kermesseRowDeleting;
+            public event tbl_rol_opcionRowChangeEventHandler tbl_rol_opcionRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_kermesseRowChangeEventHandler tbl_kermesseRowDeleted;
+            public event tbl_rol_opcionRowChangeEventHandler tbl_rol_opcionRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addtbl_kermesseRow(tbl_kermesseRow row) {
+            public void Addtbl_rol_opcionRow(tbl_rol_opcionRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseRow Addtbl_kermesseRow(int id_parroquia, string nombre, System.DateTime fecha_inicio, System.DateTime fecha_fin, string desc_general, int estado, int usuario_creacion, int usuario_modificacion, int usuario_eliminacion, System.DateTime fecha_creacion, System.DateTime fecha_modificacion, System.DateTime fecha_eliminacion) {
-                tbl_kermesseRow rowtbl_kermesseRow = ((tbl_kermesseRow)(this.NewRow()));
+            public tbl_rol_opcionRow Addtbl_rol_opcionRow(tbl_rolRow parenttbl_rolRowByFK_tbl_rol_opcion_tbl_rol, tbl_opcionesRow parenttbl_opcionesRowByFK_tbl_rol_opcion_tbl_opciones) {
+                tbl_rol_opcionRow rowtbl_rol_opcionRow = ((tbl_rol_opcionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        id_parroquia,
-                        nombre,
-                        fecha_inicio,
-                        fecha_fin,
-                        desc_general,
-                        estado,
-                        usuario_creacion,
-                        usuario_modificacion,
-                        usuario_eliminacion,
-                        fecha_creacion,
-                        fecha_modificacion,
-                        fecha_eliminacion};
-                rowtbl_kermesseRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtbl_kermesseRow);
-                return rowtbl_kermesseRow;
+                        null,
+                        null};
+                if ((parenttbl_rolRowByFK_tbl_rol_opcion_tbl_rol != null)) {
+                    columnValuesArray[1] = parenttbl_rolRowByFK_tbl_rol_opcion_tbl_rol[0];
+                }
+                if ((parenttbl_opcionesRowByFK_tbl_rol_opcion_tbl_opciones != null)) {
+                    columnValuesArray[2] = parenttbl_opcionesRowByFK_tbl_rol_opcion_tbl_opciones[0];
+                }
+                rowtbl_rol_opcionRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_rol_opcionRow);
+                return rowtbl_rol_opcionRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseRow FindByid_kermesse(int id_kermesse) {
-                return ((tbl_kermesseRow)(this.Rows.Find(new object[] {
-                            id_kermesse})));
+            public tbl_rol_opcionRow FindByid_rol_opcion(int id_rol_opcion) {
+                return ((tbl_rol_opcionRow)(this.Rows.Find(new object[] {
+                            id_rol_opcion})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tbl_kermesseDataTable cln = ((tbl_kermesseDataTable)(base.Clone()));
+                tbl_rol_opcionDataTable cln = ((tbl_rol_opcionDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1869,99 +1525,62 @@ namespace KermesseApp.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tbl_kermesseDataTable();
+                return new tbl_rol_opcionDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnid_kermesse = base.Columns["id_kermesse"];
-                this.columnid_parroquia = base.Columns["id_parroquia"];
-                this.columnnombre = base.Columns["nombre"];
-                this.columnfecha_inicio = base.Columns["fecha_inicio"];
-                this.columnfecha_fin = base.Columns["fecha_fin"];
-                this.columndesc_general = base.Columns["desc_general"];
-                this.columnestado = base.Columns["estado"];
-                this.columnusuario_creacion = base.Columns["usuario_creacion"];
-                this.columnusuario_modificacion = base.Columns["usuario_modificacion"];
-                this.columnusuario_eliminacion = base.Columns["usuario_eliminacion"];
-                this.columnfecha_creacion = base.Columns["fecha_creacion"];
-                this.columnfecha_modificacion = base.Columns["fecha_modificacion"];
-                this.columnfecha_eliminacion = base.Columns["fecha_eliminacion"];
+                this.columnid_rol_opcion = base.Columns["id_rol_opcion"];
+                this.columnid_rol = base.Columns["id_rol"];
+                this.columnid_opcion = base.Columns["id_opcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnid_kermesse = new global::System.Data.DataColumn("id_kermesse", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_kermesse);
-                this.columnid_parroquia = new global::System.Data.DataColumn("id_parroquia", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_parroquia);
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columnfecha_inicio = new global::System.Data.DataColumn("fecha_inicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_inicio);
-                this.columnfecha_fin = new global::System.Data.DataColumn("fecha_fin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_fin);
-                this.columndesc_general = new global::System.Data.DataColumn("desc_general", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndesc_general);
-                this.columnestado = new global::System.Data.DataColumn("estado", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnestado);
-                this.columnusuario_creacion = new global::System.Data.DataColumn("usuario_creacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_creacion);
-                this.columnusuario_modificacion = new global::System.Data.DataColumn("usuario_modificacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_modificacion);
-                this.columnusuario_eliminacion = new global::System.Data.DataColumn("usuario_eliminacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_eliminacion);
-                this.columnfecha_creacion = new global::System.Data.DataColumn("fecha_creacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_creacion);
-                this.columnfecha_modificacion = new global::System.Data.DataColumn("fecha_modificacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_modificacion);
-                this.columnfecha_eliminacion = new global::System.Data.DataColumn("fecha_eliminacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_eliminacion);
+                this.columnid_rol_opcion = new global::System.Data.DataColumn("id_rol_opcion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_rol_opcion);
+                this.columnid_rol = new global::System.Data.DataColumn("id_rol", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_rol);
+                this.columnid_opcion = new global::System.Data.DataColumn("id_opcion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_opcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_kermesse}, true));
-                this.columnid_kermesse.AutoIncrement = true;
-                this.columnid_kermesse.AutoIncrementSeed = -1;
-                this.columnid_kermesse.AutoIncrementStep = -1;
-                this.columnid_kermesse.AllowDBNull = false;
-                this.columnid_kermesse.ReadOnly = true;
-                this.columnid_kermesse.Unique = true;
-                this.columnid_parroquia.AllowDBNull = false;
-                this.columnnombre.AllowDBNull = false;
-                this.columnnombre.MaxLength = 200;
-                this.columnfecha_inicio.AllowDBNull = false;
-                this.columnfecha_fin.AllowDBNull = false;
-                this.columndesc_general.MaxLength = 400;
-                this.columnestado.AllowDBNull = false;
-                this.columnusuario_creacion.AllowDBNull = false;
-                this.columnfecha_creacion.AllowDBNull = false;
+                                this.columnid_rol_opcion}, true));
+                this.columnid_rol_opcion.AutoIncrement = true;
+                this.columnid_rol_opcion.AutoIncrementSeed = -1;
+                this.columnid_rol_opcion.AutoIncrementStep = -1;
+                this.columnid_rol_opcion.AllowDBNull = false;
+                this.columnid_rol_opcion.ReadOnly = true;
+                this.columnid_rol_opcion.Unique = true;
+                this.columnid_rol.AllowDBNull = false;
+                this.columnid_opcion.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseRow Newtbl_kermesseRow() {
-                return ((tbl_kermesseRow)(this.NewRow()));
+            public tbl_rol_opcionRow Newtbl_rol_opcionRow() {
+                return ((tbl_rol_opcionRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tbl_kermesseRow(builder);
+                return new tbl_rol_opcionRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tbl_kermesseRow);
+                return typeof(tbl_rol_opcionRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tbl_kermesseRowChanged != null)) {
-                    this.tbl_kermesseRowChanged(this, new tbl_kermesseRowChangeEvent(((tbl_kermesseRow)(e.Row)), e.Action));
+                if ((this.tbl_rol_opcionRowChanged != null)) {
+                    this.tbl_rol_opcionRowChanged(this, new tbl_rol_opcionRowChangeEvent(((tbl_rol_opcionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1969,8 +1588,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tbl_kermesseRowChanging != null)) {
-                    this.tbl_kermesseRowChanging(this, new tbl_kermesseRowChangeEvent(((tbl_kermesseRow)(e.Row)), e.Action));
+                if ((this.tbl_rol_opcionRowChanging != null)) {
+                    this.tbl_rol_opcionRowChanging(this, new tbl_rol_opcionRowChangeEvent(((tbl_rol_opcionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1978,8 +1597,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tbl_kermesseRowDeleted != null)) {
-                    this.tbl_kermesseRowDeleted(this, new tbl_kermesseRowChangeEvent(((tbl_kermesseRow)(e.Row)), e.Action));
+                if ((this.tbl_rol_opcionRowDeleted != null)) {
+                    this.tbl_rol_opcionRowDeleted(this, new tbl_rol_opcionRowChangeEvent(((tbl_rol_opcionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1987,14 +1606,14 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tbl_kermesseRowDeleting != null)) {
-                    this.tbl_kermesseRowDeleting(this, new tbl_kermesseRowChangeEvent(((tbl_kermesseRow)(e.Row)), e.Action));
+                if ((this.tbl_rol_opcionRowDeleting != null)) {
+                    this.tbl_rol_opcionRowDeleting(this, new tbl_rol_opcionRowChangeEvent(((tbl_rol_opcionRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removetbl_kermesseRow(tbl_kermesseRow row) {
+            public void Removetbl_rol_opcionRow(tbl_rol_opcionRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2021,7 +1640,7 @@ namespace KermesseApp.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tbl_kermesseDataTable";
+                attribute2.FixedValue = "tbl_rol_opcionDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2067,38 +1686,18 @@ namespace KermesseApp.Reportes {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tbl_gastosDataTable : global::System.Data.TypedTableBase<tbl_gastosRow> {
+        public partial class tbl_rol_usuarioDataTable : global::System.Data.TypedTableBase<tbl_rol_usuarioRow> {
             
-            private global::System.Data.DataColumn columnid_gasto;
+            private global::System.Data.DataColumn columnid_rol_usuario;
             
-            private global::System.Data.DataColumn columnid_kermesse;
+            private global::System.Data.DataColumn columnid_usuario;
             
-            private global::System.Data.DataColumn columnid_cat_gasto;
-            
-            private global::System.Data.DataColumn columnfecha_gasto;
-            
-            private global::System.Data.DataColumn columnconcepto;
-            
-            private global::System.Data.DataColumn columnmonto;
-            
-            private global::System.Data.DataColumn columnestado;
-            
-            private global::System.Data.DataColumn columnusuario_creacion;
-            
-            private global::System.Data.DataColumn columnusuario_modificacion;
-            
-            private global::System.Data.DataColumn columnusuario_eliminacion;
-            
-            private global::System.Data.DataColumn columnfecha_creacion;
-            
-            private global::System.Data.DataColumn columnfecha_modificacion;
-            
-            private global::System.Data.DataColumn columnfecha_eliminacion;
+            private global::System.Data.DataColumn columnid_rol;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_gastosDataTable() {
-                this.TableName = "tbl_gastos";
+            public tbl_rol_usuarioDataTable() {
+                this.TableName = "tbl_rol_usuario";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2106,7 +1705,7 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_gastosDataTable(global::System.Data.DataTable table) {
+            internal tbl_rol_usuarioDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2123,112 +1722,32 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected tbl_gastosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tbl_rol_usuarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_gastoColumn {
+            public global::System.Data.DataColumn id_rol_usuarioColumn {
                 get {
-                    return this.columnid_gasto;
+                    return this.columnid_rol_usuario;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_kermesseColumn {
+            public global::System.Data.DataColumn id_usuarioColumn {
                 get {
-                    return this.columnid_kermesse;
+                    return this.columnid_usuario;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_cat_gastoColumn {
+            public global::System.Data.DataColumn id_rolColumn {
                 get {
-                    return this.columnid_cat_gasto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_gastoColumn {
-                get {
-                    return this.columnfecha_gasto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn conceptoColumn {
-                get {
-                    return this.columnconcepto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn montoColumn {
-                get {
-                    return this.columnmonto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn estadoColumn {
-                get {
-                    return this.columnestado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_creacionColumn {
-                get {
-                    return this.columnusuario_creacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_modificacionColumn {
-                get {
-                    return this.columnusuario_modificacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuario_eliminacionColumn {
-                get {
-                    return this.columnusuario_eliminacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_creacionColumn {
-                get {
-                    return this.columnfecha_creacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_modificacionColumn {
-                get {
-                    return this.columnfecha_modificacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_eliminacionColumn {
-                get {
-                    return this.columnfecha_eliminacion;
+                    return this.columnid_rol;
                 }
             }
             
@@ -2243,67 +1762,60 @@ namespace KermesseApp.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_gastosRow this[int index] {
+            public tbl_rol_usuarioRow this[int index] {
                 get {
-                    return ((tbl_gastosRow)(this.Rows[index]));
+                    return ((tbl_rol_usuarioRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_gastosRowChangeEventHandler tbl_gastosRowChanging;
+            public event tbl_rol_usuarioRowChangeEventHandler tbl_rol_usuarioRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_gastosRowChangeEventHandler tbl_gastosRowChanged;
+            public event tbl_rol_usuarioRowChangeEventHandler tbl_rol_usuarioRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_gastosRowChangeEventHandler tbl_gastosRowDeleting;
+            public event tbl_rol_usuarioRowChangeEventHandler tbl_rol_usuarioRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event tbl_gastosRowChangeEventHandler tbl_gastosRowDeleted;
+            public event tbl_rol_usuarioRowChangeEventHandler tbl_rol_usuarioRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addtbl_gastosRow(tbl_gastosRow row) {
+            public void Addtbl_rol_usuarioRow(tbl_rol_usuarioRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_gastosRow Addtbl_gastosRow(tbl_kermesseRow parenttbl_kermesseRowByFK_tbl_gastos_tbl_kermesse, int id_cat_gasto, System.DateTime fecha_gasto, string concepto, decimal monto, int estado, int usuario_creacion, int usuario_modificacion, int usuario_eliminacion, System.DateTime fecha_creacion, System.DateTime fecha_modificacion, System.DateTime fecha_eliminacion) {
-                tbl_gastosRow rowtbl_gastosRow = ((tbl_gastosRow)(this.NewRow()));
+            public tbl_rol_usuarioRow Addtbl_rol_usuarioRow(tbl_usuarioRow parenttbl_usuarioRowByFK_tbl_rol_usuario_tbl_usuario, tbl_rolRow parenttbl_rolRowByFK_tbl_rol_usuario_tbl_rol) {
+                tbl_rol_usuarioRow rowtbl_rol_usuarioRow = ((tbl_rol_usuarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        id_cat_gasto,
-                        fecha_gasto,
-                        concepto,
-                        monto,
-                        estado,
-                        usuario_creacion,
-                        usuario_modificacion,
-                        usuario_eliminacion,
-                        fecha_creacion,
-                        fecha_modificacion,
-                        fecha_eliminacion};
-                if ((parenttbl_kermesseRowByFK_tbl_gastos_tbl_kermesse != null)) {
-                    columnValuesArray[1] = parenttbl_kermesseRowByFK_tbl_gastos_tbl_kermesse[0];
+                        null};
+                if ((parenttbl_usuarioRowByFK_tbl_rol_usuario_tbl_usuario != null)) {
+                    columnValuesArray[1] = parenttbl_usuarioRowByFK_tbl_rol_usuario_tbl_usuario[0];
                 }
-                rowtbl_gastosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtbl_gastosRow);
-                return rowtbl_gastosRow;
+                if ((parenttbl_rolRowByFK_tbl_rol_usuario_tbl_rol != null)) {
+                    columnValuesArray[2] = parenttbl_rolRowByFK_tbl_rol_usuario_tbl_rol[0];
+                }
+                rowtbl_rol_usuarioRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_rol_usuarioRow);
+                return rowtbl_rol_usuarioRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_gastosRow FindByid_gasto(int id_gasto) {
-                return ((tbl_gastosRow)(this.Rows.Find(new object[] {
-                            id_gasto})));
+            public tbl_rol_usuarioRow FindByid_rol_usuario(int id_rol_usuario) {
+                return ((tbl_rol_usuarioRow)(this.Rows.Find(new object[] {
+                            id_rol_usuario})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tbl_gastosDataTable cln = ((tbl_gastosDataTable)(base.Clone()));
+                tbl_rol_usuarioDataTable cln = ((tbl_rol_usuarioDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2311,99 +1823,62 @@ namespace KermesseApp.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tbl_gastosDataTable();
+                return new tbl_rol_usuarioDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnid_gasto = base.Columns["id_gasto"];
-                this.columnid_kermesse = base.Columns["id_kermesse"];
-                this.columnid_cat_gasto = base.Columns["id_cat_gasto"];
-                this.columnfecha_gasto = base.Columns["fecha_gasto"];
-                this.columnconcepto = base.Columns["concepto"];
-                this.columnmonto = base.Columns["monto"];
-                this.columnestado = base.Columns["estado"];
-                this.columnusuario_creacion = base.Columns["usuario_creacion"];
-                this.columnusuario_modificacion = base.Columns["usuario_modificacion"];
-                this.columnusuario_eliminacion = base.Columns["usuario_eliminacion"];
-                this.columnfecha_creacion = base.Columns["fecha_creacion"];
-                this.columnfecha_modificacion = base.Columns["fecha_modificacion"];
-                this.columnfecha_eliminacion = base.Columns["fecha_eliminacion"];
+                this.columnid_rol_usuario = base.Columns["id_rol_usuario"];
+                this.columnid_usuario = base.Columns["id_usuario"];
+                this.columnid_rol = base.Columns["id_rol"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnid_gasto = new global::System.Data.DataColumn("id_gasto", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_gasto);
-                this.columnid_kermesse = new global::System.Data.DataColumn("id_kermesse", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_kermesse);
-                this.columnid_cat_gasto = new global::System.Data.DataColumn("id_cat_gasto", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_cat_gasto);
-                this.columnfecha_gasto = new global::System.Data.DataColumn("fecha_gasto", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_gasto);
-                this.columnconcepto = new global::System.Data.DataColumn("concepto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnconcepto);
-                this.columnmonto = new global::System.Data.DataColumn("monto", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmonto);
-                this.columnestado = new global::System.Data.DataColumn("estado", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnestado);
-                this.columnusuario_creacion = new global::System.Data.DataColumn("usuario_creacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_creacion);
-                this.columnusuario_modificacion = new global::System.Data.DataColumn("usuario_modificacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_modificacion);
-                this.columnusuario_eliminacion = new global::System.Data.DataColumn("usuario_eliminacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuario_eliminacion);
-                this.columnfecha_creacion = new global::System.Data.DataColumn("fecha_creacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_creacion);
-                this.columnfecha_modificacion = new global::System.Data.DataColumn("fecha_modificacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_modificacion);
-                this.columnfecha_eliminacion = new global::System.Data.DataColumn("fecha_eliminacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_eliminacion);
+                this.columnid_rol_usuario = new global::System.Data.DataColumn("id_rol_usuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_rol_usuario);
+                this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_usuario);
+                this.columnid_rol = new global::System.Data.DataColumn("id_rol", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_rol);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_gasto}, true));
-                this.columnid_gasto.AutoIncrement = true;
-                this.columnid_gasto.AutoIncrementSeed = -1;
-                this.columnid_gasto.AutoIncrementStep = -1;
-                this.columnid_gasto.AllowDBNull = false;
-                this.columnid_gasto.ReadOnly = true;
-                this.columnid_gasto.Unique = true;
-                this.columnid_kermesse.AllowDBNull = false;
-                this.columnid_cat_gasto.AllowDBNull = false;
-                this.columnfecha_gasto.AllowDBNull = false;
-                this.columnconcepto.AllowDBNull = false;
-                this.columnconcepto.MaxLength = 200;
-                this.columnmonto.AllowDBNull = false;
-                this.columnestado.AllowDBNull = false;
-                this.columnusuario_creacion.AllowDBNull = false;
-                this.columnfecha_creacion.AllowDBNull = false;
+                                this.columnid_rol_usuario}, true));
+                this.columnid_rol_usuario.AutoIncrement = true;
+                this.columnid_rol_usuario.AutoIncrementSeed = -1;
+                this.columnid_rol_usuario.AutoIncrementStep = -1;
+                this.columnid_rol_usuario.AllowDBNull = false;
+                this.columnid_rol_usuario.ReadOnly = true;
+                this.columnid_rol_usuario.Unique = true;
+                this.columnid_usuario.AllowDBNull = false;
+                this.columnid_rol.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_gastosRow Newtbl_gastosRow() {
-                return ((tbl_gastosRow)(this.NewRow()));
+            public tbl_rol_usuarioRow Newtbl_rol_usuarioRow() {
+                return ((tbl_rol_usuarioRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tbl_gastosRow(builder);
+                return new tbl_rol_usuarioRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tbl_gastosRow);
+                return typeof(tbl_rol_usuarioRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tbl_gastosRowChanged != null)) {
-                    this.tbl_gastosRowChanged(this, new tbl_gastosRowChangeEvent(((tbl_gastosRow)(e.Row)), e.Action));
+                if ((this.tbl_rol_usuarioRowChanged != null)) {
+                    this.tbl_rol_usuarioRowChanged(this, new tbl_rol_usuarioRowChangeEvent(((tbl_rol_usuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2411,8 +1886,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tbl_gastosRowChanging != null)) {
-                    this.tbl_gastosRowChanging(this, new tbl_gastosRowChangeEvent(((tbl_gastosRow)(e.Row)), e.Action));
+                if ((this.tbl_rol_usuarioRowChanging != null)) {
+                    this.tbl_rol_usuarioRowChanging(this, new tbl_rol_usuarioRowChangeEvent(((tbl_rol_usuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2420,8 +1895,8 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tbl_gastosRowDeleted != null)) {
-                    this.tbl_gastosRowDeleted(this, new tbl_gastosRowChangeEvent(((tbl_gastosRow)(e.Row)), e.Action));
+                if ((this.tbl_rol_usuarioRowDeleted != null)) {
+                    this.tbl_rol_usuarioRowDeleted(this, new tbl_rol_usuarioRowChangeEvent(((tbl_rol_usuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2429,14 +1904,14 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tbl_gastosRowDeleting != null)) {
-                    this.tbl_gastosRowDeleting(this, new tbl_gastosRowChangeEvent(((tbl_gastosRow)(e.Row)), e.Action));
+                if ((this.tbl_rol_usuarioRowDeleting != null)) {
+                    this.tbl_rol_usuarioRowDeleting(this, new tbl_rol_usuarioRowChangeEvent(((tbl_rol_usuarioRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removetbl_gastosRow(tbl_gastosRow row) {
+            public void Removetbl_rol_usuarioRow(tbl_rol_usuarioRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2463,7 +1938,7 @@ namespace KermesseApp.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tbl_gastosDataTable";
+                attribute2.FixedValue = "tbl_rol_usuarioDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2507,144 +1982,80 @@ namespace KermesseApp.Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tbl_arqueocajaRow : global::System.Data.DataRow {
+        public partial class tbl_usuarioRow : global::System.Data.DataRow {
             
-            private tbl_arqueocajaDataTable tabletbl_arqueocaja;
+            private tbl_usuarioDataTable tabletbl_usuario;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_arqueocajaRow(global::System.Data.DataRowBuilder rb) : 
+            internal tbl_usuarioRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletbl_arqueocaja = ((tbl_arqueocajaDataTable)(this.Table));
+                this.tabletbl_usuario = ((tbl_usuarioDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_arqueocaja {
+            public int id_usuario {
                 get {
-                    return ((int)(this[this.tabletbl_arqueocaja.id_arqueocajaColumn]));
+                    return ((int)(this[this.tabletbl_usuario.id_usuarioColumn]));
                 }
                 set {
-                    this[this.tabletbl_arqueocaja.id_arqueocajaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idkermesse {
-                get {
-                    return ((int)(this[this.tabletbl_arqueocaja.idkermesseColumn]));
-                }
-                set {
-                    this[this.tabletbl_arqueocaja.idkermesseColumn] = value;
+                    this[this.tabletbl_usuario.id_usuarioColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_arqueo {
+            public string usuario {
                 get {
-                    return ((global::System.DateTime)(this[this.tabletbl_arqueocaja.fecha_arqueoColumn]));
+                    return ((string)(this[this.tabletbl_usuario.usuarioColumn]));
                 }
                 set {
-                    this[this.tabletbl_arqueocaja.fecha_arqueoColumn] = value;
+                    this[this.tabletbl_usuario.usuarioColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal gran_total {
+            public string pwd {
                 get {
-                    return ((decimal)(this[this.tabletbl_arqueocaja.gran_totalColumn]));
+                    return ((string)(this[this.tabletbl_usuario.pwdColumn]));
                 }
                 set {
-                    this[this.tabletbl_arqueocaja.gran_totalColumn] = value;
+                    this[this.tabletbl_usuario.pwdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_creacion {
+            public string nombres {
                 get {
-                    return ((int)(this[this.tabletbl_arqueocaja.usuario_creacionColumn]));
+                    return ((string)(this[this.tabletbl_usuario.nombresColumn]));
                 }
                 set {
-                    this[this.tabletbl_arqueocaja.usuario_creacionColumn] = value;
+                    this[this.tabletbl_usuario.nombresColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_creacion {
+            public string apellidos {
                 get {
-                    return ((global::System.DateTime)(this[this.tabletbl_arqueocaja.fecha_creacionColumn]));
+                    return ((string)(this[this.tabletbl_usuario.apellidosColumn]));
                 }
                 set {
-                    this[this.tabletbl_arqueocaja.fecha_creacionColumn] = value;
+                    this[this.tabletbl_usuario.apellidosColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_modificacion {
+            public string email {
                 get {
-                    try {
-                        return ((int)(this[this.tabletbl_arqueocaja.usuario_modificacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuario_modificacion\' in table \'tbl_arqueocaja\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_usuario.emailColumn]));
                 }
                 set {
-                    this[this.tabletbl_arqueocaja.usuario_modificacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_modificacion {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_arqueocaja.fecha_modificacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha_modificacion\' in table \'tbl_arqueocaja\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_arqueocaja.fecha_modificacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_eliminacion {
-                get {
-                    try {
-                        return ((int)(this[this.tabletbl_arqueocaja.usuario_eliminacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuario_eliminacion\' in table \'tbl_arqueocaja\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_arqueocaja.usuario_eliminacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_eliminacion {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_arqueocaja.fecha_eliminacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha_eliminacion\' in table \'tbl_arqueocaja\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_arqueocaja.fecha_eliminacionColumn] = value;
+                    this[this.tabletbl_usuario.emailColumn] = value;
                 }
             }
             
@@ -2652,681 +2063,21 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int estado {
                 get {
-                    return ((int)(this[this.tabletbl_arqueocaja.estadoColumn]));
+                    return ((int)(this[this.tabletbl_usuario.estadoColumn]));
                 }
                 set {
-                    this[this.tabletbl_arqueocaja.estadoColumn] = value;
+                    this[this.tabletbl_usuario.estadoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isusuario_modificacionNull() {
-                return this.IsNull(this.tabletbl_arqueocaja.usuario_modificacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setusuario_modificacionNull() {
-                this[this.tabletbl_arqueocaja.usuario_modificacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_modificacionNull() {
-                return this.IsNull(this.tabletbl_arqueocaja.fecha_modificacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_modificacionNull() {
-                this[this.tabletbl_arqueocaja.fecha_modificacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isusuario_eliminacionNull() {
-                return this.IsNull(this.tabletbl_arqueocaja.usuario_eliminacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setusuario_eliminacionNull() {
-                this[this.tabletbl_arqueocaja.usuario_eliminacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_eliminacionNull() {
-                return this.IsNull(this.tabletbl_arqueocaja.fecha_eliminacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_eliminacionNull() {
-                this[this.tabletbl_arqueocaja.fecha_eliminacionColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class tbl_ingreso_comRow : global::System.Data.DataRow {
-            
-            private tbl_ingreso_comDataTable tabletbl_ingreso_com;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_ingreso_comRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tabletbl_ingreso_com = ((tbl_ingreso_comDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_ingresocom {
-                get {
-                    return ((int)(this[this.tabletbl_ingreso_com.id_ingresocomColumn]));
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.id_ingresocomColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_kermesse {
-                get {
-                    return ((int)(this[this.tabletbl_ingreso_com.id_kermesseColumn]));
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.id_kermesseColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_comunidad {
-                get {
-                    return ((int)(this[this.tabletbl_ingreso_com.id_comunidadColumn]));
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.id_comunidadColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_producto {
-                get {
-                    return ((int)(this[this.tabletbl_ingreso_com.id_productoColumn]));
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.id_productoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int cant_producto {
-                get {
-                    return ((int)(this[this.tabletbl_ingreso_com.cant_productoColumn]));
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.cant_productoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal precio_producto {
-                get {
-                    try {
-                        return ((decimal)(this[this.tabletbl_ingreso_com.precio_productoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'precio_producto\' in table \'tbl_ingreso_com\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.precio_productoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int total_bonos {
-                get {
-                    return ((int)(this[this.tabletbl_ingreso_com.total_bonosColumn]));
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.total_bonosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_creacion {
-                get {
-                    return ((int)(this[this.tabletbl_ingreso_com.usuario_creacionColumn]));
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.usuario_creacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_modificacion {
-                get {
-                    try {
-                        return ((int)(this[this.tabletbl_ingreso_com.usuario_modificacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuario_modificacion\' in table \'tbl_ingreso_com\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.usuario_modificacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_eliminacion {
-                get {
-                    try {
-                        return ((int)(this[this.tabletbl_ingreso_com.usuario_eliminacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuario_eliminacion\' in table \'tbl_ingreso_com\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.usuario_eliminacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_creacion {
-                get {
-                    return ((global::System.DateTime)(this[this.tabletbl_ingreso_com.fecha_creacionColumn]));
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.fecha_creacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_modificacion {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_ingreso_com.fecha_modificacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha_modificacion\' in table \'tbl_ingreso_com\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.fecha_modificacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_eliminacion {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_ingreso_com.fecha_eliminacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha_eliminacion\' in table \'tbl_ingreso_com\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.fecha_eliminacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int estado {
-                get {
-                    return ((int)(this[this.tabletbl_ingreso_com.estadoColumn]));
-                }
-                set {
-                    this[this.tabletbl_ingreso_com.estadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseRow tbl_kermesseRow {
-                get {
-                    return ((tbl_kermesseRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_ingreso_com_tbl_kermesse"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_tbl_ingreso_com_tbl_kermesse"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isprecio_productoNull() {
-                return this.IsNull(this.tabletbl_ingreso_com.precio_productoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setprecio_productoNull() {
-                this[this.tabletbl_ingreso_com.precio_productoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isusuario_modificacionNull() {
-                return this.IsNull(this.tabletbl_ingreso_com.usuario_modificacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setusuario_modificacionNull() {
-                this[this.tabletbl_ingreso_com.usuario_modificacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isusuario_eliminacionNull() {
-                return this.IsNull(this.tabletbl_ingreso_com.usuario_eliminacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setusuario_eliminacionNull() {
-                this[this.tabletbl_ingreso_com.usuario_eliminacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_modificacionNull() {
-                return this.IsNull(this.tabletbl_ingreso_com.fecha_modificacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_modificacionNull() {
-                this[this.tabletbl_ingreso_com.fecha_modificacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_eliminacionNull() {
-                return this.IsNull(this.tabletbl_ingreso_com.fecha_eliminacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_eliminacionNull() {
-                this[this.tabletbl_ingreso_com.fecha_eliminacionColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class tbl_listaprecioRow : global::System.Data.DataRow {
-            
-            private tbl_listaprecioDataTable tabletbl_listaprecio;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_listaprecioRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tabletbl_listaprecio = ((tbl_listaprecioDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_listaprecio {
-                get {
-                    return ((int)(this[this.tabletbl_listaprecio.id_listaprecioColumn]));
-                }
-                set {
-                    this[this.tabletbl_listaprecio.id_listaprecioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_kermesse {
-                get {
-                    return ((int)(this[this.tabletbl_listaprecio.id_kermesseColumn]));
-                }
-                set {
-                    this[this.tabletbl_listaprecio.id_kermesseColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nombre {
-                get {
-                    return ((string)(this[this.tabletbl_listaprecio.nombreColumn]));
-                }
-                set {
-                    this[this.tabletbl_listaprecio.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string descripcion {
-                get {
-                    return ((string)(this[this.tabletbl_listaprecio.descripcionColumn]));
-                }
-                set {
-                    this[this.tabletbl_listaprecio.descripcionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int estado {
-                get {
-                    return ((int)(this[this.tabletbl_listaprecio.estadoColumn]));
-                }
-                set {
-                    this[this.tabletbl_listaprecio.estadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseRow tbl_kermesseRow {
-                get {
-                    return ((tbl_kermesseRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_listaprecio_tbl_kermesse"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_tbl_listaprecio_tbl_kermesse"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class tbl_kermesseRow : global::System.Data.DataRow {
-            
-            private tbl_kermesseDataTable tabletbl_kermesse;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_kermesseRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tabletbl_kermesse = ((tbl_kermesseDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_kermesse {
-                get {
-                    return ((int)(this[this.tabletbl_kermesse.id_kermesseColumn]));
-                }
-                set {
-                    this[this.tabletbl_kermesse.id_kermesseColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_parroquia {
-                get {
-                    return ((int)(this[this.tabletbl_kermesse.id_parroquiaColumn]));
-                }
-                set {
-                    this[this.tabletbl_kermesse.id_parroquiaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nombre {
-                get {
-                    return ((string)(this[this.tabletbl_kermesse.nombreColumn]));
-                }
-                set {
-                    this[this.tabletbl_kermesse.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_inicio {
-                get {
-                    return ((global::System.DateTime)(this[this.tabletbl_kermesse.fecha_inicioColumn]));
-                }
-                set {
-                    this[this.tabletbl_kermesse.fecha_inicioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_fin {
-                get {
-                    return ((global::System.DateTime)(this[this.tabletbl_kermesse.fecha_finColumn]));
-                }
-                set {
-                    this[this.tabletbl_kermesse.fecha_finColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string desc_general {
-                get {
-                    try {
-                        return ((string)(this[this.tabletbl_kermesse.desc_generalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'desc_general\' in table \'tbl_kermesse\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_kermesse.desc_generalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int estado {
-                get {
-                    return ((int)(this[this.tabletbl_kermesse.estadoColumn]));
-                }
-                set {
-                    this[this.tabletbl_kermesse.estadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_creacion {
-                get {
-                    return ((int)(this[this.tabletbl_kermesse.usuario_creacionColumn]));
-                }
-                set {
-                    this[this.tabletbl_kermesse.usuario_creacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_modificacion {
-                get {
-                    try {
-                        return ((int)(this[this.tabletbl_kermesse.usuario_modificacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuario_modificacion\' in table \'tbl_kermesse\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_kermesse.usuario_modificacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_eliminacion {
-                get {
-                    try {
-                        return ((int)(this[this.tabletbl_kermesse.usuario_eliminacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuario_eliminacion\' in table \'tbl_kermesse\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_kermesse.usuario_eliminacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_creacion {
-                get {
-                    return ((global::System.DateTime)(this[this.tabletbl_kermesse.fecha_creacionColumn]));
-                }
-                set {
-                    this[this.tabletbl_kermesse.fecha_creacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_modificacion {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_kermesse.fecha_modificacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha_modificacion\' in table \'tbl_kermesse\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_kermesse.fecha_modificacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_eliminacion {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_kermesse.fecha_eliminacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha_eliminacion\' in table \'tbl_kermesse\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_kermesse.fecha_eliminacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isdesc_generalNull() {
-                return this.IsNull(this.tabletbl_kermesse.desc_generalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setdesc_generalNull() {
-                this[this.tabletbl_kermesse.desc_generalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isusuario_modificacionNull() {
-                return this.IsNull(this.tabletbl_kermesse.usuario_modificacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setusuario_modificacionNull() {
-                this[this.tabletbl_kermesse.usuario_modificacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isusuario_eliminacionNull() {
-                return this.IsNull(this.tabletbl_kermesse.usuario_eliminacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setusuario_eliminacionNull() {
-                this[this.tabletbl_kermesse.usuario_eliminacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_modificacionNull() {
-                return this.IsNull(this.tabletbl_kermesse.fecha_modificacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_modificacionNull() {
-                this[this.tabletbl_kermesse.fecha_modificacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_eliminacionNull() {
-                return this.IsNull(this.tabletbl_kermesse.fecha_eliminacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_eliminacionNull() {
-                this[this.tabletbl_kermesse.fecha_eliminacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_ingreso_comRow[] Gettbl_ingreso_comRows() {
-                if ((this.Table.ChildRelations["FK_tbl_ingreso_com_tbl_kermesse"] == null)) {
-                    return new tbl_ingreso_comRow[0];
+            public tbl_rol_usuarioRow[] Gettbl_rol_usuarioRows() {
+                if ((this.Table.ChildRelations["FK_tbl_rol_usuario_tbl_usuario"] == null)) {
+                    return new tbl_rol_usuarioRow[0];
                 }
                 else {
-                    return ((tbl_ingreso_comRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tbl_ingreso_com_tbl_kermesse"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_listaprecioRow[] Gettbl_listaprecioRows() {
-                if ((this.Table.ChildRelations["FK_tbl_listaprecio_tbl_kermesse"] == null)) {
-                    return new tbl_listaprecioRow[0];
-                }
-                else {
-                    return ((tbl_listaprecioRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tbl_listaprecio_tbl_kermesse"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_gastosRow[] Gettbl_gastosRows() {
-                if ((this.Table.ChildRelations["FK_tbl_gastos_tbl_kermesse"] == null)) {
-                    return new tbl_gastosRow[0];
-                }
-                else {
-                    return ((tbl_gastosRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tbl_gastos_tbl_kermesse"])));
+                    return ((tbl_rol_usuarioRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tbl_rol_usuario_tbl_usuario"])));
                 }
             }
         }
@@ -3334,80 +2085,36 @@ namespace KermesseApp.Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tbl_gastosRow : global::System.Data.DataRow {
+        public partial class tbl_rolRow : global::System.Data.DataRow {
             
-            private tbl_gastosDataTable tabletbl_gastos;
+            private tbl_rolDataTable tabletbl_rol;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal tbl_gastosRow(global::System.Data.DataRowBuilder rb) : 
+            internal tbl_rolRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletbl_gastos = ((tbl_gastosDataTable)(this.Table));
+                this.tabletbl_rol = ((tbl_rolDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_gasto {
+            public int id_rol {
                 get {
-                    return ((int)(this[this.tabletbl_gastos.id_gastoColumn]));
+                    return ((int)(this[this.tabletbl_rol.id_rolColumn]));
                 }
                 set {
-                    this[this.tabletbl_gastos.id_gastoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_kermesse {
-                get {
-                    return ((int)(this[this.tabletbl_gastos.id_kermesseColumn]));
-                }
-                set {
-                    this[this.tabletbl_gastos.id_kermesseColumn] = value;
+                    this[this.tabletbl_rol.id_rolColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_cat_gasto {
+            public string rol {
                 get {
-                    return ((int)(this[this.tabletbl_gastos.id_cat_gastoColumn]));
+                    return ((string)(this[this.tabletbl_rol.rolColumn]));
                 }
                 set {
-                    this[this.tabletbl_gastos.id_cat_gastoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_gasto {
-                get {
-                    return ((global::System.DateTime)(this[this.tabletbl_gastos.fecha_gastoColumn]));
-                }
-                set {
-                    this[this.tabletbl_gastos.fecha_gastoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string concepto {
-                get {
-                    return ((string)(this[this.tabletbl_gastos.conceptoColumn]));
-                }
-                set {
-                    this[this.tabletbl_gastos.conceptoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal monto {
-                get {
-                    return ((decimal)(this[this.tabletbl_gastos.montoColumn]));
-                }
-                set {
-                    this[this.tabletbl_gastos.montoColumn] = value;
+                    this[this.tabletbl_rol.rolColumn] = value;
                 }
             }
             
@@ -3415,156 +2122,232 @@ namespace KermesseApp.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int estado {
                 get {
-                    return ((int)(this[this.tabletbl_gastos.estadoColumn]));
+                    return ((int)(this[this.tabletbl_rol.estadoColumn]));
                 }
                 set {
-                    this[this.tabletbl_gastos.estadoColumn] = value;
+                    this[this.tabletbl_rol.estadoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_creacion {
+            public tbl_rol_opcionRow[] Gettbl_rol_opcionRows() {
+                if ((this.Table.ChildRelations["FK_tbl_rol_opcion_tbl_rol"] == null)) {
+                    return new tbl_rol_opcionRow[0];
+                }
+                else {
+                    return ((tbl_rol_opcionRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tbl_rol_opcion_tbl_rol"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public tbl_rol_usuarioRow[] Gettbl_rol_usuarioRows() {
+                if ((this.Table.ChildRelations["FK_tbl_rol_usuario_tbl_rol"] == null)) {
+                    return new tbl_rol_usuarioRow[0];
+                }
+                else {
+                    return ((tbl_rol_usuarioRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tbl_rol_usuario_tbl_rol"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class tbl_opcionesRow : global::System.Data.DataRow {
+            
+            private tbl_opcionesDataTable tabletbl_opciones;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal tbl_opcionesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabletbl_opciones = ((tbl_opcionesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int id_opciones {
                 get {
-                    return ((int)(this[this.tabletbl_gastos.usuario_creacionColumn]));
+                    return ((int)(this[this.tabletbl_opciones.id_opcionesColumn]));
                 }
                 set {
-                    this[this.tabletbl_gastos.usuario_creacionColumn] = value;
+                    this[this.tabletbl_opciones.id_opcionesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_modificacion {
+            public string opcion {
                 get {
-                    try {
-                        return ((int)(this[this.tabletbl_gastos.usuario_modificacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuario_modificacion\' in table \'tbl_gastos\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_opciones.opcionColumn]));
                 }
                 set {
-                    this[this.tabletbl_gastos.usuario_modificacionColumn] = value;
+                    this[this.tabletbl_opciones.opcionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int usuario_eliminacion {
+            public int estado {
                 get {
-                    try {
-                        return ((int)(this[this.tabletbl_gastos.usuario_eliminacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuario_eliminacion\' in table \'tbl_gastos\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletbl_opciones.estadoColumn]));
                 }
                 set {
-                    this[this.tabletbl_gastos.usuario_eliminacionColumn] = value;
+                    this[this.tabletbl_opciones.estadoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_creacion {
+            public tbl_rol_opcionRow[] Gettbl_rol_opcionRows() {
+                if ((this.Table.ChildRelations["FK_tbl_rol_opcion_tbl_opciones"] == null)) {
+                    return new tbl_rol_opcionRow[0];
+                }
+                else {
+                    return ((tbl_rol_opcionRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tbl_rol_opcion_tbl_opciones"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class tbl_rol_opcionRow : global::System.Data.DataRow {
+            
+            private tbl_rol_opcionDataTable tabletbl_rol_opcion;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal tbl_rol_opcionRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabletbl_rol_opcion = ((tbl_rol_opcionDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int id_rol_opcion {
                 get {
-                    return ((global::System.DateTime)(this[this.tabletbl_gastos.fecha_creacionColumn]));
+                    return ((int)(this[this.tabletbl_rol_opcion.id_rol_opcionColumn]));
                 }
                 set {
-                    this[this.tabletbl_gastos.fecha_creacionColumn] = value;
+                    this[this.tabletbl_rol_opcion.id_rol_opcionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_modificacion {
+            public int id_rol {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_gastos.fecha_modificacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha_modificacion\' in table \'tbl_gastos\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletbl_rol_opcion.id_rolColumn]));
                 }
                 set {
-                    this[this.tabletbl_gastos.fecha_modificacionColumn] = value;
+                    this[this.tabletbl_rol_opcion.id_rolColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_eliminacion {
+            public int id_opcion {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_gastos.fecha_eliminacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha_eliminacion\' in table \'tbl_gastos\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletbl_rol_opcion.id_opcionColumn]));
                 }
                 set {
-                    this[this.tabletbl_gastos.fecha_eliminacionColumn] = value;
+                    this[this.tabletbl_rol_opcion.id_opcionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseRow tbl_kermesseRow {
+            public tbl_opcionesRow tbl_opcionesRow {
                 get {
-                    return ((tbl_kermesseRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_gastos_tbl_kermesse"])));
+                    return ((tbl_opcionesRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_rol_opcion_tbl_opciones"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_tbl_gastos_tbl_kermesse"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_tbl_rol_opcion_tbl_opciones"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isusuario_modificacionNull() {
-                return this.IsNull(this.tabletbl_gastos.usuario_modificacionColumn);
+            public tbl_rolRow tbl_rolRow {
+                get {
+                    return ((tbl_rolRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_rol_opcion_tbl_rol"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_tbl_rol_opcion_tbl_rol"]);
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class tbl_rol_usuarioRow : global::System.Data.DataRow {
+            
+            private tbl_rol_usuarioDataTable tabletbl_rol_usuario;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal tbl_rol_usuarioRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabletbl_rol_usuario = ((tbl_rol_usuarioDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setusuario_modificacionNull() {
-                this[this.tabletbl_gastos.usuario_modificacionColumn] = global::System.Convert.DBNull;
+            public int id_rol_usuario {
+                get {
+                    return ((int)(this[this.tabletbl_rol_usuario.id_rol_usuarioColumn]));
+                }
+                set {
+                    this[this.tabletbl_rol_usuario.id_rol_usuarioColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isusuario_eliminacionNull() {
-                return this.IsNull(this.tabletbl_gastos.usuario_eliminacionColumn);
+            public int id_usuario {
+                get {
+                    return ((int)(this[this.tabletbl_rol_usuario.id_usuarioColumn]));
+                }
+                set {
+                    this[this.tabletbl_rol_usuario.id_usuarioColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setusuario_eliminacionNull() {
-                this[this.tabletbl_gastos.usuario_eliminacionColumn] = global::System.Convert.DBNull;
+            public int id_rol {
+                get {
+                    return ((int)(this[this.tabletbl_rol_usuario.id_rolColumn]));
+                }
+                set {
+                    this[this.tabletbl_rol_usuario.id_rolColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_modificacionNull() {
-                return this.IsNull(this.tabletbl_gastos.fecha_modificacionColumn);
+            public tbl_rolRow tbl_rolRow {
+                get {
+                    return ((tbl_rolRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_rol_usuario_tbl_rol"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_tbl_rol_usuario_tbl_rol"]);
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_modificacionNull() {
-                this[this.tabletbl_gastos.fecha_modificacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_eliminacionNull() {
-                return this.IsNull(this.tabletbl_gastos.fecha_eliminacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_eliminacionNull() {
-                this[this.tabletbl_gastos.fecha_eliminacionColumn] = global::System.Convert.DBNull;
+            public tbl_usuarioRow tbl_usuarioRow {
+                get {
+                    return ((tbl_usuarioRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_rol_usuario_tbl_usuario"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_tbl_rol_usuario_tbl_usuario"]);
+                }
             }
         }
         
@@ -3572,22 +2355,22 @@ namespace KermesseApp.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class tbl_arqueocajaRowChangeEvent : global::System.EventArgs {
+        public class tbl_usuarioRowChangeEvent : global::System.EventArgs {
             
-            private tbl_arqueocajaRow eventRow;
+            private tbl_usuarioRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_arqueocajaRowChangeEvent(tbl_arqueocajaRow row, global::System.Data.DataRowAction action) {
+            public tbl_usuarioRowChangeEvent(tbl_usuarioRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_arqueocajaRow Row {
+            public tbl_usuarioRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3606,22 +2389,22 @@ namespace KermesseApp.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class tbl_ingreso_comRowChangeEvent : global::System.EventArgs {
+        public class tbl_rolRowChangeEvent : global::System.EventArgs {
             
-            private tbl_ingreso_comRow eventRow;
+            private tbl_rolRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_ingreso_comRowChangeEvent(tbl_ingreso_comRow row, global::System.Data.DataRowAction action) {
+            public tbl_rolRowChangeEvent(tbl_rolRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_ingreso_comRow Row {
+            public tbl_rolRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3640,22 +2423,22 @@ namespace KermesseApp.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class tbl_listaprecioRowChangeEvent : global::System.EventArgs {
+        public class tbl_opcionesRowChangeEvent : global::System.EventArgs {
             
-            private tbl_listaprecioRow eventRow;
+            private tbl_opcionesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_listaprecioRowChangeEvent(tbl_listaprecioRow row, global::System.Data.DataRowAction action) {
+            public tbl_opcionesRowChangeEvent(tbl_opcionesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_listaprecioRow Row {
+            public tbl_opcionesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3674,22 +2457,22 @@ namespace KermesseApp.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class tbl_kermesseRowChangeEvent : global::System.EventArgs {
+        public class tbl_rol_opcionRowChangeEvent : global::System.EventArgs {
             
-            private tbl_kermesseRow eventRow;
+            private tbl_rol_opcionRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseRowChangeEvent(tbl_kermesseRow row, global::System.Data.DataRowAction action) {
+            public tbl_rol_opcionRowChangeEvent(tbl_rol_opcionRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_kermesseRow Row {
+            public tbl_rol_opcionRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3708,22 +2491,22 @@ namespace KermesseApp.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class tbl_gastosRowChangeEvent : global::System.EventArgs {
+        public class tbl_rol_usuarioRowChangeEvent : global::System.EventArgs {
             
-            private tbl_gastosRow eventRow;
+            private tbl_rol_usuarioRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_gastosRowChangeEvent(tbl_gastosRow row, global::System.Data.DataRowAction action) {
+            public tbl_rol_usuarioRowChangeEvent(tbl_rol_usuarioRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_gastosRow Row {
+            public tbl_rol_usuarioRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3751,7 +2534,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tbl_arqueocajaTableAdapter : global::System.ComponentModel.Component {
+    public partial class tbl_usuarioTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3765,7 +2548,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public tbl_arqueocajaTableAdapter() {
+        public tbl_usuarioTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3862,54 +2645,44 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tbl_arqueocaja";
-            tableMapping.ColumnMappings.Add("id_arqueocaja", "id_arqueocaja");
-            tableMapping.ColumnMappings.Add("idkermesse", "idkermesse");
-            tableMapping.ColumnMappings.Add("fecha_arqueo", "fecha_arqueo");
-            tableMapping.ColumnMappings.Add("gran_total", "gran_total");
-            tableMapping.ColumnMappings.Add("usuario_creacion", "usuario_creacion");
-            tableMapping.ColumnMappings.Add("fecha_creacion", "fecha_creacion");
-            tableMapping.ColumnMappings.Add("usuario_modificacion", "usuario_modificacion");
-            tableMapping.ColumnMappings.Add("fecha_modificacion", "fecha_modificacion");
-            tableMapping.ColumnMappings.Add("usuario_eliminacion", "usuario_eliminacion");
-            tableMapping.ColumnMappings.Add("fecha_eliminacion", "fecha_eliminacion");
+            tableMapping.DataSetTable = "tbl_usuario";
+            tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
+            tableMapping.ColumnMappings.Add("usuario", "usuario");
+            tableMapping.ColumnMappings.Add("pwd", "pwd");
+            tableMapping.ColumnMappings.Add("nombres", "nombres");
+            tableMapping.ColumnMappings.Add("apellidos", "apellidos");
+            tableMapping.ColumnMappings.Add("email", "email");
             tableMapping.ColumnMappings.Add("estado", "estado");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_arqueocaja] WHERE (([id_arqueocaja] = @Original_id_arqueoc" +
-                "aja))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_usuario] WHERE (([id_usuario] = @Original_id_usuario))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_arqueocaja", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_arqueocaja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_arqueocaja] ([idkermesse], [fecha_arqueo], [gran_total], [usuario_creacion], [fecha_creacion], [usuario_modificacion], [fecha_modificacion], [usuario_eliminacion], [fecha_eliminacion], [estado]) VALUES (@idkermesse, @fecha_arqueo, @gran_total, @usuario_creacion, @fecha_creacion, @usuario_modificacion, @fecha_modificacion, @usuario_eliminacion, @fecha_eliminacion, @estado)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_usuario] ([usuario], [pwd], [nombres], [apellidos], [email" +
+                "], [estado]) VALUES (@usuario, @pwd, @nombres, @apellidos, @email, @estado)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idkermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idkermesse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_arqueo", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_arqueo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gran_total", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gran_total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_creacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_modificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_modificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_eliminacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_eliminacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pwd", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pwd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombres", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@apellidos", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "apellidos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_arqueocaja] SET [idkermesse] = @idkermesse, [fecha_arqueo] = @fecha_arqueo, [gran_total] = @gran_total, [usuario_creacion] = @usuario_creacion, [fecha_creacion] = @fecha_creacion, [usuario_modificacion] = @usuario_modificacion, [fecha_modificacion] = @fecha_modificacion, [usuario_eliminacion] = @usuario_eliminacion, [fecha_eliminacion] = @fecha_eliminacion, [estado] = @estado WHERE (([id_arqueocaja] = @Original_id_arqueocaja))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_usuario] SET [usuario] = @usuario, [pwd] = @pwd, [nombres] = @n" +
+                "ombres, [apellidos] = @apellidos, [email] = @email, [estado] = @estado WHERE (([" +
+                "id_usuario] = @Original_id_usuario))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idkermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idkermesse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_arqueo", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_arqueo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gran_total", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gran_total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_creacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_modificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_modificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_eliminacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_eliminacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pwd", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pwd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombres", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@apellidos", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "apellidos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_arqueocaja", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_arqueocaja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3925,9 +2698,8 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_arqueocaja, idkermesse, fecha_arqueo, gran_total, usuario_creacion, fec" +
-                "ha_creacion, usuario_modificacion, fecha_modificacion, usuario_eliminacion, fech" +
-                "a_eliminacion, estado FROM dbo.tbl_arqueocaja";
+            this._commandCollection[0].CommandText = "SELECT id_usuario, usuario, pwd, nombres, apellidos, email, estado FROM dbo.tbl_u" +
+                "suario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3935,7 +2707,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsRpt.tbl_arqueocajaDataTable dataTable) {
+        public virtual int Fill(dsRpt.tbl_usuarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3948,9 +2720,9 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsRpt.tbl_arqueocajaDataTable GetData() {
+        public virtual dsRpt.tbl_usuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsRpt.tbl_arqueocajaDataTable dataTable = new dsRpt.tbl_arqueocajaDataTable();
+            dsRpt.tbl_usuarioDataTable dataTable = new dsRpt.tbl_usuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3958,7 +2730,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsRpt.tbl_arqueocajaDataTable dataTable) {
+        public virtual int Update(dsRpt.tbl_usuarioDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -3966,7 +2738,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(dsRpt dataSet) {
-            return this.Adapter.Update(dataSet, "tbl_arqueocaja");
+            return this.Adapter.Update(dataSet, "tbl_usuario");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3988,8 +2760,8 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_arqueocaja) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_arqueocaja));
+        public virtual int Delete(int Original_id_usuario) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_usuario));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4010,1136 +2782,38 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int idkermesse, System.DateTime fecha_arqueo, decimal gran_total, int usuario_creacion, System.DateTime fecha_creacion, global::System.Nullable<int> usuario_modificacion, global::System.Nullable<global::System.DateTime> fecha_modificacion, global::System.Nullable<int> usuario_eliminacion, global::System.Nullable<global::System.DateTime> fecha_eliminacion, int estado) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idkermesse));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(fecha_arqueo));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(gran_total));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(usuario_creacion));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(fecha_creacion));
-            if ((usuario_modificacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(usuario_modificacion.Value));
+        public virtual int Insert(string usuario, string pwd, string nombres, string apellidos, string email, int estado) {
+            if ((usuario == null)) {
+                throw new global::System.ArgumentNullException("usuario");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(usuario));
             }
-            if ((fecha_modificacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(fecha_modificacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((usuario_eliminacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(usuario_eliminacion.Value));
+            if ((pwd == null)) {
+                throw new global::System.ArgumentNullException("pwd");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(pwd));
             }
-            if ((fecha_eliminacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(fecha_eliminacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(estado));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int idkermesse, System.DateTime fecha_arqueo, decimal gran_total, int usuario_creacion, System.DateTime fecha_creacion, global::System.Nullable<int> usuario_modificacion, global::System.Nullable<global::System.DateTime> fecha_modificacion, global::System.Nullable<int> usuario_eliminacion, global::System.Nullable<global::System.DateTime> fecha_eliminacion, int estado, int Original_id_arqueocaja) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idkermesse));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(fecha_arqueo));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(gran_total));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(usuario_creacion));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(fecha_creacion));
-            if ((usuario_modificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(usuario_modificacion.Value));
+            if ((nombres == null)) {
+                throw new global::System.ArgumentNullException("nombres");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(nombres));
             }
-            if ((fecha_modificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(fecha_modificacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((usuario_eliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(usuario_eliminacion.Value));
+            if ((apellidos == null)) {
+                throw new global::System.ArgumentNullException("apellidos");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(apellidos));
             }
-            if ((fecha_eliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(fecha_eliminacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(estado));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id_arqueocaja));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tbl_ingreso_comTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public tbl_ingreso_comTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tbl_ingreso_com";
-            tableMapping.ColumnMappings.Add("id_ingresocom", "id_ingresocom");
-            tableMapping.ColumnMappings.Add("id_kermesse", "id_kermesse");
-            tableMapping.ColumnMappings.Add("id_comunidad", "id_comunidad");
-            tableMapping.ColumnMappings.Add("id_producto", "id_producto");
-            tableMapping.ColumnMappings.Add("cant_producto", "cant_producto");
-            tableMapping.ColumnMappings.Add("precio_producto", "precio_producto");
-            tableMapping.ColumnMappings.Add("total_bonos", "total_bonos");
-            tableMapping.ColumnMappings.Add("usuario_creacion", "usuario_creacion");
-            tableMapping.ColumnMappings.Add("usuario_modificacion", "usuario_modificacion");
-            tableMapping.ColumnMappings.Add("usuario_eliminacion", "usuario_eliminacion");
-            tableMapping.ColumnMappings.Add("fecha_creacion", "fecha_creacion");
-            tableMapping.ColumnMappings.Add("fecha_modificacion", "fecha_modificacion");
-            tableMapping.ColumnMappings.Add("fecha_eliminacion", "fecha_eliminacion");
-            tableMapping.ColumnMappings.Add("estado", "estado");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_ingreso_com] WHERE (([id_ingresocom] = @Original_id_ingres" +
-                "ocom))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_ingresocom", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_ingresocom", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_ingreso_com] ([id_kermesse], [id_comunidad], [id_producto], [cant_producto], [precio_producto], [total_bonos], [usuario_creacion], [usuario_modificacion], [usuario_eliminacion], [fecha_creacion], [fecha_modificacion], [fecha_eliminacion], [estado]) VALUES (@id_kermesse, @id_comunidad, @id_producto, @cant_producto, @precio_producto, @total_bonos, @usuario_creacion, @usuario_modificacion, @usuario_eliminacion, @fecha_creacion, @fecha_modificacion, @fecha_eliminacion, @estado)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_kermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kermesse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_comunidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_comunidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_producto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_producto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cant_producto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cant_producto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precio_producto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "precio_producto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total_bonos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_bonos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_creacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_modificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_eliminacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_modificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_eliminacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_ingreso_com] SET [id_kermesse] = @id_kermesse, [id_comunidad] = @id_comunidad, [id_producto] = @id_producto, [cant_producto] = @cant_producto, [precio_producto] = @precio_producto, [total_bonos] = @total_bonos, [usuario_creacion] = @usuario_creacion, [usuario_modificacion] = @usuario_modificacion, [usuario_eliminacion] = @usuario_eliminacion, [fecha_creacion] = @fecha_creacion, [fecha_modificacion] = @fecha_modificacion, [fecha_eliminacion] = @fecha_eliminacion, [estado] = @estado WHERE (([id_ingresocom] = @Original_id_ingresocom))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_kermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kermesse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_comunidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_comunidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_producto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_producto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cant_producto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cant_producto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precio_producto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "precio_producto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total_bonos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total_bonos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_creacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_modificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_eliminacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_modificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_eliminacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_ingresocom", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_ingresocom", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["KERMESSEConnectionString"].ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_ingresocom, id_kermesse, id_comunidad, id_producto, cant_producto, prec" +
-                "io_producto, total_bonos, usuario_creacion, usuario_modificacion, usuario_elimin" +
-                "acion, fecha_creacion, fecha_modificacion, fecha_eliminacion, estado FROM dbo.tb" +
-                "l_ingreso_com";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsRpt.tbl_ingreso_comDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsRpt.tbl_ingreso_comDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsRpt.tbl_ingreso_comDataTable dataTable = new dsRpt.tbl_ingreso_comDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsRpt.tbl_ingreso_comDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsRpt dataSet) {
-            return this.Adapter.Update(dataSet, "tbl_ingreso_com");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_ingresocom) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_ingresocom));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_kermesse, int id_comunidad, int id_producto, int cant_producto, global::System.Nullable<decimal> precio_producto, int total_bonos, int usuario_creacion, global::System.Nullable<int> usuario_modificacion, global::System.Nullable<int> usuario_eliminacion, System.DateTime fecha_creacion, global::System.Nullable<global::System.DateTime> fecha_modificacion, global::System.Nullable<global::System.DateTime> fecha_eliminacion, int estado) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_kermesse));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_comunidad));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(id_producto));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(cant_producto));
-            if ((precio_producto.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(precio_producto.Value));
+            if ((email == null)) {
+                throw new global::System.ArgumentNullException("email");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(total_bonos));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(usuario_creacion));
-            if ((usuario_modificacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(usuario_modificacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((usuario_eliminacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(usuario_eliminacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(fecha_creacion));
-            if ((fecha_modificacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(fecha_modificacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((fecha_eliminacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(fecha_eliminacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[12].Value = ((int)(estado));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_kermesse, int id_comunidad, int id_producto, int cant_producto, global::System.Nullable<decimal> precio_producto, int total_bonos, int usuario_creacion, global::System.Nullable<int> usuario_modificacion, global::System.Nullable<int> usuario_eliminacion, System.DateTime fecha_creacion, global::System.Nullable<global::System.DateTime> fecha_modificacion, global::System.Nullable<global::System.DateTime> fecha_eliminacion, int estado, int Original_id_ingresocom) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_kermesse));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_comunidad));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(id_producto));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(cant_producto));
-            if ((precio_producto.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(precio_producto.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(total_bonos));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(usuario_creacion));
-            if ((usuario_modificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(usuario_modificacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((usuario_eliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(usuario_eliminacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(fecha_creacion));
-            if ((fecha_modificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(fecha_modificacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((fecha_eliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(fecha_eliminacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(estado));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_id_ingresocom));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tbl_listaprecioTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public tbl_listaprecioTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tbl_listaprecio";
-            tableMapping.ColumnMappings.Add("id_listaprecio", "id_listaprecio");
-            tableMapping.ColumnMappings.Add("id_kermesse", "id_kermesse");
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("descripcion", "descripcion");
-            tableMapping.ColumnMappings.Add("estado", "estado");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_listaprecio] WHERE (([id_listaprecio] = @Original_id_lista" +
-                "precio))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_listaprecio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_listaprecio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_listaprecio] ([id_kermesse], [nombre], [descripcion], [est" +
-                "ado]) VALUES (@id_kermesse, @nombre, @descripcion, @estado)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_kermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kermesse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripcion", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_listaprecio] SET [id_kermesse] = @id_kermesse, [nombre] = @nomb" +
-                "re, [descripcion] = @descripcion, [estado] = @estado WHERE (([id_listaprecio] = " +
-                "@Original_id_listaprecio))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_kermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kermesse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripcion", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_listaprecio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_listaprecio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["KERMESSEConnectionString"].ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_listaprecio, id_kermesse, nombre, descripcion, estado FROM dbo.tbl_list" +
-                "aprecio";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsRpt.tbl_listaprecioDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsRpt.tbl_listaprecioDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsRpt.tbl_listaprecioDataTable dataTable = new dsRpt.tbl_listaprecioDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsRpt.tbl_listaprecioDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsRpt dataSet) {
-            return this.Adapter.Update(dataSet, "tbl_listaprecio");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_listaprecio) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_listaprecio));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_kermesse, string nombre, string descripcion, int estado) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_kermesse));
-            if ((nombre == null)) {
-                throw new global::System.ArgumentNullException("nombre");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nombre));
-            }
-            if ((descripcion == null)) {
-                throw new global::System.ArgumentNullException("descripcion");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(descripcion));
-            }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(estado));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_kermesse, string nombre, string descripcion, int estado, int Original_id_listaprecio) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_kermesse));
-            if ((nombre == null)) {
-                throw new global::System.ArgumentNullException("nombre");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nombre));
-            }
-            if ((descripcion == null)) {
-                throw new global::System.ArgumentNullException("descripcion");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(descripcion));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(estado));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id_listaprecio));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tbl_kermesseTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public tbl_kermesseTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tbl_kermesse";
-            tableMapping.ColumnMappings.Add("id_kermesse", "id_kermesse");
-            tableMapping.ColumnMappings.Add("id_parroquia", "id_parroquia");
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("fecha_inicio", "fecha_inicio");
-            tableMapping.ColumnMappings.Add("fecha_fin", "fecha_fin");
-            tableMapping.ColumnMappings.Add("desc_general", "desc_general");
-            tableMapping.ColumnMappings.Add("estado", "estado");
-            tableMapping.ColumnMappings.Add("usuario_creacion", "usuario_creacion");
-            tableMapping.ColumnMappings.Add("usuario_modificacion", "usuario_modificacion");
-            tableMapping.ColumnMappings.Add("usuario_eliminacion", "usuario_eliminacion");
-            tableMapping.ColumnMappings.Add("fecha_creacion", "fecha_creacion");
-            tableMapping.ColumnMappings.Add("fecha_modificacion", "fecha_modificacion");
-            tableMapping.ColumnMappings.Add("fecha_eliminacion", "fecha_eliminacion");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_kermesse] WHERE (([id_kermesse] = @Original_id_kermesse))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_kermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kermesse", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_kermesse] ([id_parroquia], [nombre], [fecha_inicio], [fecha_fin], [desc_general], [estado], [usuario_creacion], [usuario_modificacion], [usuario_eliminacion], [fecha_creacion], [fecha_modificacion], [fecha_eliminacion]) VALUES (@id_parroquia, @nombre, @fecha_inicio, @fecha_fin, @desc_general, @estado, @usuario_creacion, @usuario_modificacion, @usuario_eliminacion, @fecha_creacion, @fecha_modificacion, @fecha_eliminacion)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_parroquia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_parroquia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_inicio", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_fin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@desc_general", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "desc_general", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_creacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_modificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_eliminacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_modificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_eliminacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_kermesse] SET [id_parroquia] = @id_parroquia, [nombre] = @nombre, [fecha_inicio] = @fecha_inicio, [fecha_fin] = @fecha_fin, [desc_general] = @desc_general, [estado] = @estado, [usuario_creacion] = @usuario_creacion, [usuario_modificacion] = @usuario_modificacion, [usuario_eliminacion] = @usuario_eliminacion, [fecha_creacion] = @fecha_creacion, [fecha_modificacion] = @fecha_modificacion, [fecha_eliminacion] = @fecha_eliminacion WHERE (([id_kermesse] = @Original_id_kermesse))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_parroquia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_parroquia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_inicio", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_fin", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@desc_general", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "desc_general", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_creacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_modificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_eliminacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_modificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_eliminacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_kermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kermesse", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["KERMESSEConnectionString"].ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_kermesse, id_parroquia, nombre, fecha_inicio, fecha_fin, desc_general, " +
-                "estado, usuario_creacion, usuario_modificacion, usuario_eliminacion, fecha_creac" +
-                "ion, fecha_modificacion, fecha_eliminacion FROM dbo.tbl_kermesse";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsRpt.tbl_kermesseDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsRpt.tbl_kermesseDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsRpt.tbl_kermesseDataTable dataTable = new dsRpt.tbl_kermesseDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsRpt.tbl_kermesseDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsRpt dataSet) {
-            return this.Adapter.Update(dataSet, "tbl_kermesse");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_kermesse) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_kermesse));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_parroquia, string nombre, System.DateTime fecha_inicio, System.DateTime fecha_fin, string desc_general, int estado, int usuario_creacion, global::System.Nullable<int> usuario_modificacion, global::System.Nullable<int> usuario_eliminacion, System.DateTime fecha_creacion, global::System.Nullable<global::System.DateTime> fecha_modificacion, global::System.Nullable<global::System.DateTime> fecha_eliminacion) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_parroquia));
-            if ((nombre == null)) {
-                throw new global::System.ArgumentNullException("nombre");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nombre));
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(fecha_inicio));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(fecha_fin));
-            if ((desc_general == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(desc_general));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(email));
             }
             this.Adapter.InsertCommand.Parameters[5].Value = ((int)(estado));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(usuario_creacion));
-            if ((usuario_modificacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(usuario_modificacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((usuario_eliminacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(usuario_eliminacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(fecha_creacion));
-            if ((fecha_modificacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(fecha_modificacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((fecha_eliminacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(fecha_eliminacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5160,50 +2834,39 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_parroquia, string nombre, System.DateTime fecha_inicio, System.DateTime fecha_fin, string desc_general, int estado, int usuario_creacion, global::System.Nullable<int> usuario_modificacion, global::System.Nullable<int> usuario_eliminacion, System.DateTime fecha_creacion, global::System.Nullable<global::System.DateTime> fecha_modificacion, global::System.Nullable<global::System.DateTime> fecha_eliminacion, int Original_id_kermesse) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_parroquia));
-            if ((nombre == null)) {
-                throw new global::System.ArgumentNullException("nombre");
+        public virtual int Update(string usuario, string pwd, string nombres, string apellidos, string email, int estado, int Original_id_usuario) {
+            if ((usuario == null)) {
+                throw new global::System.ArgumentNullException("usuario");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nombre));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(usuario));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(fecha_inicio));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(fecha_fin));
-            if ((desc_general == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            if ((pwd == null)) {
+                throw new global::System.ArgumentNullException("pwd");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(desc_general));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(pwd));
+            }
+            if ((nombres == null)) {
+                throw new global::System.ArgumentNullException("nombres");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(nombres));
+            }
+            if ((apellidos == null)) {
+                throw new global::System.ArgumentNullException("apellidos");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(apellidos));
+            }
+            if ((email == null)) {
+                throw new global::System.ArgumentNullException("email");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(email));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(estado));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(usuario_creacion));
-            if ((usuario_modificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(usuario_modificacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((usuario_eliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(usuario_eliminacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(fecha_creacion));
-            if ((fecha_modificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(fecha_modificacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((fecha_eliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(fecha_eliminacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_id_kermesse));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id_usuario));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5230,7 +2893,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tbl_gastosTableAdapter : global::System.ComponentModel.Component {
+    public partial class tbl_rolTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -5244,7 +2907,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public tbl_gastosTableAdapter() {
+        public tbl_rolTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5341,59 +3004,30 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tbl_gastos";
-            tableMapping.ColumnMappings.Add("id_gasto", "id_gasto");
-            tableMapping.ColumnMappings.Add("id_kermesse", "id_kermesse");
-            tableMapping.ColumnMappings.Add("id_cat_gasto", "id_cat_gasto");
-            tableMapping.ColumnMappings.Add("fecha_gasto", "fecha_gasto");
-            tableMapping.ColumnMappings.Add("concepto", "concepto");
-            tableMapping.ColumnMappings.Add("monto", "monto");
+            tableMapping.DataSetTable = "tbl_rol";
+            tableMapping.ColumnMappings.Add("id_rol", "id_rol");
+            tableMapping.ColumnMappings.Add("rol", "rol");
             tableMapping.ColumnMappings.Add("estado", "estado");
-            tableMapping.ColumnMappings.Add("usuario_creacion", "usuario_creacion");
-            tableMapping.ColumnMappings.Add("usuario_modificacion", "usuario_modificacion");
-            tableMapping.ColumnMappings.Add("usuario_eliminacion", "usuario_eliminacion");
-            tableMapping.ColumnMappings.Add("fecha_creacion", "fecha_creacion");
-            tableMapping.ColumnMappings.Add("fecha_modificacion", "fecha_modificacion");
-            tableMapping.ColumnMappings.Add("fecha_eliminacion", "fecha_eliminacion");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_gastos] WHERE (([id_gasto] = @Original_id_gasto))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_rol] WHERE (([id_rol] = @Original_id_rol))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_gasto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_gasto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_rol", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_gastos] ([id_kermesse], [id_cat_gasto], [fecha_gasto], [concepto], [monto], [estado], [usuario_creacion], [usuario_modificacion], [usuario_eliminacion], [fecha_creacion], [fecha_modificacion], [fecha_eliminacion]) VALUES (@id_kermesse, @id_cat_gasto, @fecha_gasto, @concepto, @monto, @estado, @usuario_creacion, @usuario_modificacion, @usuario_eliminacion, @fecha_creacion, @fecha_modificacion, @fecha_eliminacion)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_rol] ([rol], [estado]) VALUES (@rol, @estado)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_kermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kermesse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_cat_gasto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_cat_gasto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_gasto", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_gasto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@concepto", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "concepto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@monto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "monto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rol", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_creacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_modificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_eliminacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_modificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_eliminacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_gastos] SET [id_kermesse] = @id_kermesse, [id_cat_gasto] = @id_cat_gasto, [fecha_gasto] = @fecha_gasto, [concepto] = @concepto, [monto] = @monto, [estado] = @estado, [usuario_creacion] = @usuario_creacion, [usuario_modificacion] = @usuario_modificacion, [usuario_eliminacion] = @usuario_eliminacion, [fecha_creacion] = @fecha_creacion, [fecha_modificacion] = @fecha_modificacion, [fecha_eliminacion] = @fecha_eliminacion WHERE (([id_gasto] = @Original_id_gasto))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_rol] SET [rol] = @rol, [estado] = @estado WHERE (([id_rol] = @O" +
+                "riginal_id_rol))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_kermesse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kermesse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_cat_gasto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_cat_gasto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_gasto", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_gasto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@concepto", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "concepto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@monto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "monto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rol", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_creacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_modificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario_eliminacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_creacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_creacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_modificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_modificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_eliminacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_eliminacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_gasto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_gasto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_rol", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5409,9 +3043,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_gasto, id_kermesse, id_cat_gasto, fecha_gasto, concepto, monto, estado," +
-                " usuario_creacion, usuario_modificacion, usuario_eliminacion, fecha_creacion, fe" +
-                "cha_modificacion, fecha_eliminacion FROM dbo.tbl_gastos";
+            this._commandCollection[0].CommandText = "SELECT id_rol, rol, estado FROM dbo.tbl_rol";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5419,7 +3051,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsRpt.tbl_gastosDataTable dataTable) {
+        public virtual int Fill(dsRpt.tbl_rolDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5432,9 +3064,9 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsRpt.tbl_gastosDataTable GetData() {
+        public virtual dsRpt.tbl_rolDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsRpt.tbl_gastosDataTable dataTable = new dsRpt.tbl_gastosDataTable();
+            dsRpt.tbl_rolDataTable dataTable = new dsRpt.tbl_rolDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5442,7 +3074,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsRpt.tbl_gastosDataTable dataTable) {
+        public virtual int Update(dsRpt.tbl_rolDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5450,7 +3082,7 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(dsRpt dataSet) {
-            return this.Adapter.Update(dataSet, "tbl_gastos");
+            return this.Adapter.Update(dataSet, "tbl_rol");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5472,8 +3104,8 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_gasto) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_gasto));
+        public virtual int Delete(int Original_id_rol) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_rol));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5494,44 +3126,14 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_kermesse, int id_cat_gasto, System.DateTime fecha_gasto, string concepto, decimal monto, int estado, int usuario_creacion, global::System.Nullable<int> usuario_modificacion, global::System.Nullable<int> usuario_eliminacion, System.DateTime fecha_creacion, global::System.Nullable<global::System.DateTime> fecha_modificacion, global::System.Nullable<global::System.DateTime> fecha_eliminacion) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_kermesse));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_cat_gasto));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(fecha_gasto));
-            if ((concepto == null)) {
-                throw new global::System.ArgumentNullException("concepto");
+        public virtual int Insert(string rol, int estado) {
+            if ((rol == null)) {
+                throw new global::System.ArgumentNullException("rol");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(concepto));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(rol));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(monto));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(estado));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(usuario_creacion));
-            if ((usuario_modificacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(usuario_modificacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((usuario_eliminacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(usuario_eliminacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(fecha_creacion));
-            if ((fecha_modificacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(fecha_modificacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((fecha_eliminacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(fecha_eliminacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(estado));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5552,45 +3154,887 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_kermesse, int id_cat_gasto, System.DateTime fecha_gasto, string concepto, decimal monto, int estado, int usuario_creacion, global::System.Nullable<int> usuario_modificacion, global::System.Nullable<int> usuario_eliminacion, System.DateTime fecha_creacion, global::System.Nullable<global::System.DateTime> fecha_modificacion, global::System.Nullable<global::System.DateTime> fecha_eliminacion, int Original_id_gasto) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_kermesse));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_cat_gasto));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(fecha_gasto));
-            if ((concepto == null)) {
-                throw new global::System.ArgumentNullException("concepto");
+        public virtual int Update(string rol, int estado, int Original_id_rol) {
+            if ((rol == null)) {
+                throw new global::System.ArgumentNullException("rol");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(concepto));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(rol));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(monto));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(estado));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(usuario_creacion));
-            if ((usuario_modificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(usuario_modificacion.Value));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(estado));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id_rol));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class tbl_opcionesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public tbl_opcionesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "tbl_opciones";
+            tableMapping.ColumnMappings.Add("id_opciones", "id_opciones");
+            tableMapping.ColumnMappings.Add("opcion", "opcion");
+            tableMapping.ColumnMappings.Add("estado", "estado");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_opciones] WHERE (([id_opciones] = @Original_id_opciones))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_opciones", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_opciones", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_opciones] ([opcion], [estado]) VALUES (@opcion, @estado)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@opcion", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "opcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_opciones] SET [opcion] = @opcion, [estado] = @estado WHERE (([i" +
+                "d_opciones] = @Original_id_opciones))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@opcion", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "opcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_opciones", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_opciones", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["KERMESSEConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT id_opciones, opcion, estado FROM dbo.tbl_opciones";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsRpt.tbl_opcionesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsRpt.tbl_opcionesDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsRpt.tbl_opcionesDataTable dataTable = new dsRpt.tbl_opcionesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsRpt.tbl_opcionesDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsRpt dataSet) {
+            return this.Adapter.Update(dataSet, "tbl_opciones");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_id_opciones) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_opciones));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string opcion, int estado) {
+            if ((opcion == null)) {
+                throw new global::System.ArgumentNullException("opcion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(opcion));
             }
-            if ((usuario_eliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(usuario_eliminacion.Value));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(estado));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string opcion, int estado, int Original_id_opciones) {
+            if ((opcion == null)) {
+                throw new global::System.ArgumentNullException("opcion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(opcion));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(fecha_creacion));
-            if ((fecha_modificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(fecha_modificacion.Value));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(estado));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id_opciones));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
             }
-            if ((fecha_eliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(fecha_eliminacion.Value));
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class tbl_rol_opcionTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public tbl_rol_opcionTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_id_gasto));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "tbl_rol_opcion";
+            tableMapping.ColumnMappings.Add("id_rol_opcion", "id_rol_opcion");
+            tableMapping.ColumnMappings.Add("id_rol", "id_rol");
+            tableMapping.ColumnMappings.Add("id_opcion", "id_opcion");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_rol_opcion] WHERE (([id_rol_opcion] = @Original_id_rol_opc" +
+                "ion))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_rol_opcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol_opcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_rol_opcion] ([id_rol], [id_opcion]) VALUES (@id_rol, @id_o" +
+                "pcion)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_rol", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_opcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_opcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_rol_opcion] SET [id_rol] = @id_rol, [id_opcion] = @id_opcion WH" +
+                "ERE (([id_rol_opcion] = @Original_id_rol_opcion))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_rol", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_opcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_opcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_rol_opcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol_opcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["KERMESSEConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT id_rol_opcion, id_rol, id_opcion FROM dbo.tbl_rol_opcion";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsRpt.tbl_rol_opcionDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsRpt.tbl_rol_opcionDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsRpt.tbl_rol_opcionDataTable dataTable = new dsRpt.tbl_rol_opcionDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsRpt.tbl_rol_opcionDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsRpt dataSet) {
+            return this.Adapter.Update(dataSet, "tbl_rol_opcion");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_id_rol_opcion) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_rol_opcion));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int id_rol, int id_opcion) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_rol));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_opcion));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int id_rol, int id_opcion, int Original_id_rol_opcion) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_rol));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_opcion));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id_rol_opcion));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class tbl_rol_usuarioTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public tbl_rol_usuarioTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "tbl_rol_usuario";
+            tableMapping.ColumnMappings.Add("id_rol_usuario", "id_rol_usuario");
+            tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
+            tableMapping.ColumnMappings.Add("id_rol", "id_rol");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_rol_usuario] WHERE (([id_rol_usuario] = @Original_id_rol_u" +
+                "suario))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_rol_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_rol_usuario] ([id_usuario], [id_rol]) VALUES (@id_usuario," +
+                " @id_rol)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_rol", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_rol_usuario] SET [id_usuario] = @id_usuario, [id_rol] = @id_rol" +
+                " WHERE (([id_rol_usuario] = @Original_id_rol_usuario))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_rol", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_rol_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_rol_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["KERMESSEConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT id_rol_usuario, id_usuario, id_rol FROM dbo.tbl_rol_usuario";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsRpt.tbl_rol_usuarioDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsRpt.tbl_rol_usuarioDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsRpt.tbl_rol_usuarioDataTable dataTable = new dsRpt.tbl_rol_usuarioDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsRpt.tbl_rol_usuarioDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsRpt dataSet) {
+            return this.Adapter.Update(dataSet, "tbl_rol_usuario");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_id_rol_usuario) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_rol_usuario));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int id_usuario, int id_rol) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_usuario));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_rol));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int id_usuario, int id_rol, int Original_id_rol_usuario) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_usuario));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_rol));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id_rol_usuario));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5620,15 +4064,15 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private tbl_arqueocajaTableAdapter _tbl_arqueocajaTableAdapter;
+        private tbl_usuarioTableAdapter _tbl_usuarioTableAdapter;
         
-        private tbl_ingreso_comTableAdapter _tbl_ingreso_comTableAdapter;
+        private tbl_rolTableAdapter _tbl_rolTableAdapter;
         
-        private tbl_listaprecioTableAdapter _tbl_listaprecioTableAdapter;
+        private tbl_opcionesTableAdapter _tbl_opcionesTableAdapter;
         
-        private tbl_kermesseTableAdapter _tbl_kermesseTableAdapter;
+        private tbl_rol_opcionTableAdapter _tbl_rol_opcionTableAdapter;
         
-        private tbl_gastosTableAdapter _tbl_gastosTableAdapter;
+        private tbl_rol_usuarioTableAdapter _tbl_rol_usuarioTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -5650,12 +4094,12 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tbl_arqueocajaTableAdapter tbl_arqueocajaTableAdapter {
+        public tbl_usuarioTableAdapter tbl_usuarioTableAdapter {
             get {
-                return this._tbl_arqueocajaTableAdapter;
+                return this._tbl_usuarioTableAdapter;
             }
             set {
-                this._tbl_arqueocajaTableAdapter = value;
+                this._tbl_usuarioTableAdapter = value;
             }
         }
         
@@ -5664,12 +4108,12 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tbl_ingreso_comTableAdapter tbl_ingreso_comTableAdapter {
+        public tbl_rolTableAdapter tbl_rolTableAdapter {
             get {
-                return this._tbl_ingreso_comTableAdapter;
+                return this._tbl_rolTableAdapter;
             }
             set {
-                this._tbl_ingreso_comTableAdapter = value;
+                this._tbl_rolTableAdapter = value;
             }
         }
         
@@ -5678,12 +4122,12 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tbl_listaprecioTableAdapter tbl_listaprecioTableAdapter {
+        public tbl_opcionesTableAdapter tbl_opcionesTableAdapter {
             get {
-                return this._tbl_listaprecioTableAdapter;
+                return this._tbl_opcionesTableAdapter;
             }
             set {
-                this._tbl_listaprecioTableAdapter = value;
+                this._tbl_opcionesTableAdapter = value;
             }
         }
         
@@ -5692,12 +4136,12 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tbl_kermesseTableAdapter tbl_kermesseTableAdapter {
+        public tbl_rol_opcionTableAdapter tbl_rol_opcionTableAdapter {
             get {
-                return this._tbl_kermesseTableAdapter;
+                return this._tbl_rol_opcionTableAdapter;
             }
             set {
-                this._tbl_kermesseTableAdapter = value;
+                this._tbl_rol_opcionTableAdapter = value;
             }
         }
         
@@ -5706,12 +4150,12 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tbl_gastosTableAdapter tbl_gastosTableAdapter {
+        public tbl_rol_usuarioTableAdapter tbl_rol_usuarioTableAdapter {
             get {
-                return this._tbl_gastosTableAdapter;
+                return this._tbl_rol_usuarioTableAdapter;
             }
             set {
-                this._tbl_gastosTableAdapter = value;
+                this._tbl_rol_usuarioTableAdapter = value;
             }
         }
         
@@ -5734,25 +4178,25 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._tbl_arqueocajaTableAdapter != null) 
-                            && (this._tbl_arqueocajaTableAdapter.Connection != null))) {
-                    return this._tbl_arqueocajaTableAdapter.Connection;
+                if (((this._tbl_usuarioTableAdapter != null) 
+                            && (this._tbl_usuarioTableAdapter.Connection != null))) {
+                    return this._tbl_usuarioTableAdapter.Connection;
                 }
-                if (((this._tbl_ingreso_comTableAdapter != null) 
-                            && (this._tbl_ingreso_comTableAdapter.Connection != null))) {
-                    return this._tbl_ingreso_comTableAdapter.Connection;
+                if (((this._tbl_rolTableAdapter != null) 
+                            && (this._tbl_rolTableAdapter.Connection != null))) {
+                    return this._tbl_rolTableAdapter.Connection;
                 }
-                if (((this._tbl_listaprecioTableAdapter != null) 
-                            && (this._tbl_listaprecioTableAdapter.Connection != null))) {
-                    return this._tbl_listaprecioTableAdapter.Connection;
+                if (((this._tbl_opcionesTableAdapter != null) 
+                            && (this._tbl_opcionesTableAdapter.Connection != null))) {
+                    return this._tbl_opcionesTableAdapter.Connection;
                 }
-                if (((this._tbl_kermesseTableAdapter != null) 
-                            && (this._tbl_kermesseTableAdapter.Connection != null))) {
-                    return this._tbl_kermesseTableAdapter.Connection;
+                if (((this._tbl_rol_opcionTableAdapter != null) 
+                            && (this._tbl_rol_opcionTableAdapter.Connection != null))) {
+                    return this._tbl_rol_opcionTableAdapter.Connection;
                 }
-                if (((this._tbl_gastosTableAdapter != null) 
-                            && (this._tbl_gastosTableAdapter.Connection != null))) {
-                    return this._tbl_gastosTableAdapter.Connection;
+                if (((this._tbl_rol_usuarioTableAdapter != null) 
+                            && (this._tbl_rol_usuarioTableAdapter.Connection != null))) {
+                    return this._tbl_rol_usuarioTableAdapter.Connection;
                 }
                 return null;
             }
@@ -5767,19 +4211,19 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._tbl_arqueocajaTableAdapter != null)) {
+                if ((this._tbl_usuarioTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tbl_ingreso_comTableAdapter != null)) {
+                if ((this._tbl_rolTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tbl_listaprecioTableAdapter != null)) {
+                if ((this._tbl_opcionesTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tbl_kermesseTableAdapter != null)) {
+                if ((this._tbl_rol_opcionTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tbl_gastosTableAdapter != null)) {
+                if ((this._tbl_rol_usuarioTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -5793,48 +4237,48 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(dsRpt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tbl_kermesseTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tbl_kermesse.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_usuarioTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_usuario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_kermesseTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_usuarioTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_arqueocajaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tbl_arqueocaja.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_rolTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_rol.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_arqueocajaTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_rolTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_ingreso_comTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tbl_ingreso_com.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_opcionesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_opciones.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_ingreso_comTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_opcionesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_listaprecioTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tbl_listaprecio.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_rol_opcionTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_rol_opcion.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_listaprecioTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_rol_opcionTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_gastosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tbl_gastos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_rol_usuarioTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_rol_usuario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_gastosTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_rol_usuarioTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5848,43 +4292,43 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(dsRpt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tbl_kermesseTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tbl_kermesse.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_usuarioTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_usuario.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_kermesseTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_usuarioTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_arqueocajaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tbl_arqueocaja.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_rolTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_rol.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_arqueocajaTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_rolTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_ingreso_comTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tbl_ingreso_com.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_opcionesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_opciones.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_ingreso_comTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_opcionesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_listaprecioTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tbl_listaprecio.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_rol_opcionTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_rol_opcion.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_listaprecioTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_rol_opcionTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_gastosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tbl_gastos.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_rol_usuarioTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_rol_usuario.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_gastosTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_rol_usuarioTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5898,43 +4342,43 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(dsRpt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tbl_gastosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tbl_gastos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_rol_usuarioTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_rol_usuario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_gastosTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_rol_usuarioTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_listaprecioTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tbl_listaprecio.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_rol_opcionTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_rol_opcion.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_listaprecioTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_rol_opcionTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_ingreso_comTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tbl_ingreso_com.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_opcionesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_opciones.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_ingreso_comTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_opcionesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_arqueocajaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tbl_arqueocaja.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_rolTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_rol.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_arqueocajaTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_rolTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_kermesseTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tbl_kermesse.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_usuarioTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_usuario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_kermesseTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_usuarioTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -5977,28 +4421,28 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._tbl_arqueocajaTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tbl_arqueocajaTableAdapter.Connection) == false))) {
+            if (((this._tbl_usuarioTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_usuarioTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tbl_ingreso_comTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tbl_ingreso_comTableAdapter.Connection) == false))) {
+            if (((this._tbl_rolTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_rolTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tbl_listaprecioTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tbl_listaprecioTableAdapter.Connection) == false))) {
+            if (((this._tbl_opcionesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_opcionesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tbl_kermesseTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tbl_kermesseTableAdapter.Connection) == false))) {
+            if (((this._tbl_rol_opcionTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_rol_opcionTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tbl_gastosTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tbl_gastosTableAdapter.Connection) == false))) {
+            if (((this._tbl_rol_usuarioTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_rol_usuarioTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -6034,49 +4478,49 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._tbl_arqueocajaTableAdapter != null)) {
-                    revertConnections.Add(this._tbl_arqueocajaTableAdapter, this._tbl_arqueocajaTableAdapter.Connection);
-                    this._tbl_arqueocajaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tbl_arqueocajaTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tbl_arqueocajaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tbl_arqueocajaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_arqueocajaTableAdapter.Adapter);
+                if ((this._tbl_usuarioTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_usuarioTableAdapter, this._tbl_usuarioTableAdapter.Connection);
+                    this._tbl_usuarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tbl_usuarioTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tbl_usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_usuarioTableAdapter.Adapter);
                     }
                 }
-                if ((this._tbl_ingreso_comTableAdapter != null)) {
-                    revertConnections.Add(this._tbl_ingreso_comTableAdapter, this._tbl_ingreso_comTableAdapter.Connection);
-                    this._tbl_ingreso_comTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tbl_ingreso_comTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tbl_ingreso_comTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tbl_ingreso_comTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_ingreso_comTableAdapter.Adapter);
+                if ((this._tbl_rolTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_rolTableAdapter, this._tbl_rolTableAdapter.Connection);
+                    this._tbl_rolTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tbl_rolTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tbl_rolTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_rolTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_rolTableAdapter.Adapter);
                     }
                 }
-                if ((this._tbl_listaprecioTableAdapter != null)) {
-                    revertConnections.Add(this._tbl_listaprecioTableAdapter, this._tbl_listaprecioTableAdapter.Connection);
-                    this._tbl_listaprecioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tbl_listaprecioTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tbl_listaprecioTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tbl_listaprecioTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_listaprecioTableAdapter.Adapter);
+                if ((this._tbl_opcionesTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_opcionesTableAdapter, this._tbl_opcionesTableAdapter.Connection);
+                    this._tbl_opcionesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tbl_opcionesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tbl_opcionesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_opcionesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_opcionesTableAdapter.Adapter);
                     }
                 }
-                if ((this._tbl_kermesseTableAdapter != null)) {
-                    revertConnections.Add(this._tbl_kermesseTableAdapter, this._tbl_kermesseTableAdapter.Connection);
-                    this._tbl_kermesseTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tbl_kermesseTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tbl_kermesseTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tbl_kermesseTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_kermesseTableAdapter.Adapter);
+                if ((this._tbl_rol_opcionTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_rol_opcionTableAdapter, this._tbl_rol_opcionTableAdapter.Connection);
+                    this._tbl_rol_opcionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tbl_rol_opcionTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tbl_rol_opcionTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_rol_opcionTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_rol_opcionTableAdapter.Adapter);
                     }
                 }
-                if ((this._tbl_gastosTableAdapter != null)) {
-                    revertConnections.Add(this._tbl_gastosTableAdapter, this._tbl_gastosTableAdapter.Connection);
-                    this._tbl_gastosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tbl_gastosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tbl_gastosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tbl_gastosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_gastosTableAdapter.Adapter);
+                if ((this._tbl_rol_usuarioTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_rol_usuarioTableAdapter, this._tbl_rol_usuarioTableAdapter.Connection);
+                    this._tbl_rol_usuarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tbl_rol_usuarioTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tbl_rol_usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_rol_usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_rol_usuarioTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -6137,25 +4581,25 @@ namespace KermesseApp.Reportes.dsRptTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._tbl_arqueocajaTableAdapter != null)) {
-                    this._tbl_arqueocajaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_arqueocajaTableAdapter]));
-                    this._tbl_arqueocajaTableAdapter.Transaction = null;
+                if ((this._tbl_usuarioTableAdapter != null)) {
+                    this._tbl_usuarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_usuarioTableAdapter]));
+                    this._tbl_usuarioTableAdapter.Transaction = null;
                 }
-                if ((this._tbl_ingreso_comTableAdapter != null)) {
-                    this._tbl_ingreso_comTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_ingreso_comTableAdapter]));
-                    this._tbl_ingreso_comTableAdapter.Transaction = null;
+                if ((this._tbl_rolTableAdapter != null)) {
+                    this._tbl_rolTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_rolTableAdapter]));
+                    this._tbl_rolTableAdapter.Transaction = null;
                 }
-                if ((this._tbl_listaprecioTableAdapter != null)) {
-                    this._tbl_listaprecioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_listaprecioTableAdapter]));
-                    this._tbl_listaprecioTableAdapter.Transaction = null;
+                if ((this._tbl_opcionesTableAdapter != null)) {
+                    this._tbl_opcionesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_opcionesTableAdapter]));
+                    this._tbl_opcionesTableAdapter.Transaction = null;
                 }
-                if ((this._tbl_kermesseTableAdapter != null)) {
-                    this._tbl_kermesseTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_kermesseTableAdapter]));
-                    this._tbl_kermesseTableAdapter.Transaction = null;
+                if ((this._tbl_rol_opcionTableAdapter != null)) {
+                    this._tbl_rol_opcionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_rol_opcionTableAdapter]));
+                    this._tbl_rol_opcionTableAdapter.Transaction = null;
                 }
-                if ((this._tbl_gastosTableAdapter != null)) {
-                    this._tbl_gastosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_gastosTableAdapter]));
-                    this._tbl_gastosTableAdapter.Transaction = null;
+                if ((this._tbl_rol_usuarioTableAdapter != null)) {
+                    this._tbl_rol_usuarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_rol_usuarioTableAdapter]));
+                    this._tbl_rol_usuarioTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

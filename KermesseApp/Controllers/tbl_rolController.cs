@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using KermesseApp.Models;
+using Microsoft.Reporting.WebForms;
+using System.IO;
 
 namespace KermesseApp.Controllers
 {
@@ -96,5 +98,25 @@ namespace KermesseApp.Controllers
                 return View("ListRol", listFiltrada);
             }
         }
+        public ActionResult VerRptRol(String tipo)
+        {
+            LocalReport rpt = new LocalReport();
+            string mt, enc, f;
+            string[] s;
+            Warning[] w;
+
+            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "rptrol.rdlc");
+            rpt.ReportPath = ruta;
+
+            List<tbl_usuario> lista = new List<tbl_usuario>();
+            lista = db.tbl_usuario.ToList();
+
+            ReportDataSource rds = new ReportDataSource("dsRptRol", lista);
+            rpt.DataSources.Add(rds);
+
+            var b = rpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
+            return new FileContentResult(b, mt);
+        }
+
     }
 }

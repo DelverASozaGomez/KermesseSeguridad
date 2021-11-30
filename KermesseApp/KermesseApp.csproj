@@ -424,7 +424,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reportes\rptResumenIngreso.rdlc" />
+    <EmbeddedResource Include="Reportes\rptOpcion.rdlc" />
+    <EmbeddedResource Include="Reportes\rptRol.rdlc" />
+    <EmbeddedResource Include="Reportes\rptUsuario.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
