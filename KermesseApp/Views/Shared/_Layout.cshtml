@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Kermesse App</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                @Html.ActionLink("KermesseApp", "Index", null , new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Control de Opciones", "ListOpciones", "tbl_opciones", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Control de Usuarios", "ListUsuario", "tbl_usuario", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Control de Roles", "ListRol", "tbl_rol", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Usuario-Rol", "ListRolUsuario", "tbl_rolUsuario", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Usuario-Opcion", "ListRolOpcion", "tbl_rolOpcion", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("TasaCambio", "LisTasaCambio", "tbl_tasacambio", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Logout", "Logout", "tbl_usuario", null, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mt-md-5 col-md-12">
+        <div class="container">
+
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap-sketchy")
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
